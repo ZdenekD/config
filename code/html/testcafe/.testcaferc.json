@@ -1,0 +1,12 @@
+{
+  "browsers": [
+    "chromium:headless"
+  ],
+  "src": [
+    "*.testcafe.js"
+  ],
+  "hostname": "localhost",
+  "concurrency": 3,
+  "quarantineMode": true,
+  "selectorTimeout": 3000
+}
