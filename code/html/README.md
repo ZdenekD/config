@@ -10,17 +10,6 @@
 
     backstopjs
 ---
-### [TestCafe](https://devexpress.github.io/testcafe/)
-- End-to-end web testing
-
-**Config**
-
-    /code/html/testcafe/.testcaferc.json
-
-**Packages**
-
-    testcafe
----
 ### [Pa11y](https://pa11y.org/)
 - Accessibility tests
 - Settings go through node script. It's needed to have `config.json` file with settings
@@ -33,3 +22,25 @@
 
     pa11y
     pa11y-reporter-html
+---
+### [TestCafe](https://devexpress.github.io/testcafe/)
+- End-to-end web testing
+
+**Config**
+
+    /code/html/testcafe/.testcaferc.json
+
+**Packages**
+
+    testcafe
+---
+### [Webhint](https://webhint.io)
+- Complex site tests
+
+**Config**
+
+    /code/html/webhint/.hintrc
+
+**Packages**
+
+    hint

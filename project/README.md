@@ -22,6 +22,9 @@ There's minimal configurations editable for the needs of specific projects.
 Environment settings
 
     PORT=3000 - default port used for node server
+    WEBPACK_PORT=3010 - webpack port
+    PARCEL_PORT=3011 - parcel port
+    BROWSERSYNC_PORT=8000 - browsersync port
 
 - [webpack](https://webpack.js.org)
 - [parcel](https://parceljs.org)
@@ -40,6 +43,9 @@ Environment settings
 ---
 ### [package.json](https://npm.github.io/using-pkgs-docs/package-json/the-package-json-file.html)
 - Projects `package.json` sample file with some important records and tasks
+
+- [Webhint](https://webhint.io)
+    - install: `yarn add -D hint`
 
 **Config**
 
