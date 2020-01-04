@@ -1,0 +1,9 @@
+{
+  "entry": {
+    "app": "./src/index.jsx"
+  },
+  "output": {
+    "dir": "./dist"
+  },
+  "public": "public"
+}
