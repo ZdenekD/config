@@ -35,20 +35,20 @@
 
     "start": "NODE_ENV=development webpack-dev-server --mode development --color --compress --open",
     "build": "yarn clean && yarn format && NODE_ENV=production webpack --mode production"
-
+---
 #### Without css file extract
 - Webpack config file without extracting css file (it's used e.g. if we send some component with styles to 3rd party customer)
 
 **Config**
 
     /project/builder/webpack/no-css-extract/webpack.config.babel.js
-
+---
 #### With css file extract
 
 **Config**
 
     /project/builder/webpack/css-extract/webpack.config.babel.js
-
+---
 #### With js dynamic loadable scripts
 
 **Config**

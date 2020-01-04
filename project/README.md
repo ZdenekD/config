@@ -41,6 +41,14 @@ Environment settings
 
     /project/.gitignore.sample
 ---
+### [.nvmrc](https://github.com/nvm-sh/nvm)
+- Set node version for users with nvm
+- You can use `nvm use` command to switch to node version in `.nvmrc` file
+
+**Config**
+
+    /project/.nvmrc.sample
+---
 ### [package.json](https://npm.github.io/using-pkgs-docs/package-json/the-package-json-file.html)
 - Projects `package.json` sample file with some important records and tasks
 
