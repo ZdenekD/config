@@ -22,7 +22,8 @@
     "test:js": "jest",
     "test:js:watch": "jest --watch",
     "test:snyk": "snyk monitor",
-    "test:webhint": "hint http://localhost:3000"
+    "test:webhint": "hint http://localhost:3000",
+    "test:packages": "yarn outdated"
   },
   "engines": {
     "node": ">=10.13.0",
