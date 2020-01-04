@@ -5,6 +5,7 @@
     - [@babel/plugin-proposal-optional-chaining](https://github.com/tc39/proposal-optional-chaining)
     - [@babel/plugin-proposal-nullish-coalescing-operator](https://github.com/tc39/proposal-nullish-coalescing)
     - [@babel/plugin-proposal-private-methods](https://github.com/tc39/proposal-private-methods)
+    - [@babel/plugin-syntax-dynamic-import](https://babeljs.io/docs/en/next/babel-plugin-syntax-dynamic-import.html)
 
 ### Vanilla javascript
 [documentation](./javascript/README.md)
