@@ -5,20 +5,21 @@
 
 <ifModule mod_mime.c>
     AddType text/xml xml
+    AddType text/cache-manifest appcache
+    AddType text/javascript js
     AddType application/json json
     AddType application/rss+xml rss
     AddType application/json map
-    AddType text/javascript js
     AddType application/manifest+json webmanifest
-    AddType text/cache-manifest appcache
     AddType video/mp4 mp4
     AddType video/webm webm
     AddType image/svg+xml svgz
     AddType image/webp webp
+    AddType image/x-icon ico
     AddType font/woff woff
     AddType font/woff2 woff2
 
-    AddCharset utf-8 .appcache .css .js .json .xml
+    AddCharset utf-8 .appcache .css .js .json .xml .html
 </ifModule>
 
 <ifModule mod_deflate.c>
