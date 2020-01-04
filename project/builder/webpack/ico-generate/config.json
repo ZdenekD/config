@@ -1,0 +1,30 @@
+{
+  "entry": {
+    "app": "./src/index.jsx"
+  },
+  "output": {
+    "dir": "./dist"
+  },
+  "public": "public",
+  "favicons": {
+    "logo": "./favicon.png",
+    "prefix": "[hash:base64:8]",
+    "favicons": {
+      "appName": "App Name",
+      "appDescription": "App Description",
+      "developerName": "zdenekd",
+      "developerURL": "https://zdenekd.cz",
+      "background": "#fff",
+      "icons": {
+        "android": true,
+        "appleIcon": true,
+        "appleStartup": false,
+        "coast": false,
+        "favicons": true,
+        "firefox": false,
+        "windows": true,
+        "yandex": false
+      }
+    }
+  }
+}

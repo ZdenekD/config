@@ -1,14 +1,20 @@
 import path from 'path';
-import CopyWebpackPlugin from 'copy-webpack-plugin';
-import HtmlReplaceWebpackPlugin from 'html-replace-webpack-plugin';
+import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ImageminPlugin from 'imagemin-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 require('dotenv').config();
 
 const config = require('./config.json');
 
 const isProduction = process.env.NODE_ENV === 'production';
+const favicons = {
+    cache: true,
+    logo: './favicon.png',
+    ...config.favicons,
+};
+const FaviconsWebpackPluginConfig = new FaviconsWebpackPlugin(favicons);
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
     template: path.resolve(__dirname, 'src/index.html'),
     filename: 'index.html',
@@ -23,18 +29,10 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
     },
     robots: isProduction ? 'index, follow' : 'noindex, nofollow',
 });
-const CopyWebpackPluginConfig = new CopyWebpackPlugin([
-    {
-        from: `${config.public}/images`,
-        to: 'images',
-    },
-]);
-const HtmlReplaceWebpackPluginConfig = new HtmlReplaceWebpackPlugin([
-    {
-        pattern: `${config.public}/images/`,
-        replacement: 'images/',
-    },
-]);
+const MiniCssExtractPluginConfig = new MiniCssExtractPlugin({
+    filename: '[name].[hash].css',
+    chunkFilename: '[id].[hash].css',
+});
 const ImageminPluginConfig = new ImageminPlugin({
     disable: !isProduction,
     context: 'src',
@@ -66,9 +64,9 @@ const ImageminPluginConfig = new ImageminPlugin({
     },
 });
 const plugins = [
+    MiniCssExtractPluginConfig,
     HtmlWebpackPluginConfig,
-    CopyWebpackPluginConfig,
-    HtmlReplaceWebpackPluginConfig,
+    FaviconsWebpackPluginConfig,
     ImageminPluginConfig,
 ];
 
@@ -77,18 +75,7 @@ module.exports = () => ({
     output: {
         filename: '[name].[hash].js',
         path: path.resolve(__dirname, config.output.dir),
-    },
-    optimization: {
-        splitChunks: {
-            cacheGroups: {
-                vendor: {
-                    test: /[\\/]node_modules[\\/]/,
-                    chunks: 'all',
-                    name: 'vendor',
-                    enforce: true,
-                },
-            },
-        },
+        chunkFilename: '[name].[hash].js',
     },
     plugins,
     resolve: {
@@ -128,7 +115,10 @@ module.exports = () => ({
                 exclude: /node_modules|bower_components|vendor/,
                 use: [
                     {
-                        loader: 'style-loader',
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            hmr: !isProduction,
+                        },
                     },
                     {
                         loader: 'css-loader',

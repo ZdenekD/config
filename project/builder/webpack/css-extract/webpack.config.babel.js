@@ -7,7 +7,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 require('dotenv').config();
 
-const config = require('./config.json.js');
+const config = require('./config.json');
 
 const isProduction = process.env.NODE_ENV === 'production';
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
@@ -25,8 +25,8 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
     robots: isProduction ? 'index, follow' : 'noindex, nofollow',
 });
 const MiniCssExtractPluginConfig = new MiniCssExtractPlugin({
-    filename: isProduction ? '[name].[hash].css' : '[name].css',
-    chunkFilename: isProduction ? '[id].[hash].css' : '[name].css',
+    filename: '[name].[hash].css',
+    chunkFilename: '[id].[hash].css',
 });
 const CopyWebpackPluginConfig = new CopyWebpackPlugin([
     {

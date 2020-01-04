@@ -49,6 +49,13 @@
 
     /project/builder/webpack/css-extract/webpack.config.babel.js
 ---
+#### With favicons generator
+
+**Config**
+
+    /project/builder/webpack/ico-generate/webpack.config.babel.js
+    /project/builder/webpack/ico-generate/config.json
+---
 #### With js dynamic loadable scripts
 
 **Config**
