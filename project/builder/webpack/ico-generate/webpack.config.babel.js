@@ -75,7 +75,19 @@ module.exports = () => ({
     output: {
         filename: '[name].[hash].js',
         path: path.resolve(__dirname, config.output.dir),
-        chunkFilename: '[name].[hash].js',
+        publicPath: '/',
+    },
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                vendor: {
+                    test: /[\\/]node_modules[\\/]/,
+                    chunks: 'all',
+                    name: 'vendor',
+                    enforce: true,
+                },
+            },
+        },
     },
     plugins,
     resolve: {

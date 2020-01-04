@@ -82,8 +82,9 @@ module.exports = () => ({
     entry: config.entry,
     output: {
         filename: '[name].[hash].js',
-        path: path.resolve(__dirname, config.output.dir),
         chunkFilename: '[name].[hash].js',
+        path: path.resolve(__dirname, config.output.dir),
+        publicPath: '/',
     },
     plugins,
     resolve: {
