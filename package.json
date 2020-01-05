@@ -1,0 +1,23 @@
+{
+  "name": "config-files",
+  "version": "1.0.0",
+  "repository": "git@github.com:ZdenekD/config.git",
+  "author": "ZdenekD <ditezdenek@gmail.com>",
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{html,css,js,json,yml,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1"
+  }
+}
