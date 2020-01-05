@@ -15,25 +15,34 @@
     eslint-plugin-react
     eslint-plugin-react-hooks
     jest
+
 ---
+
 #### [Babel](https://babeljs.io)
-- Config for version 7+ with 'env' preset 
+
+-   Config for version 7+ with 'env' preset
 
 **Config**
 
     /code/scripts/react/.babelrc
+
 ---
+
 #### [Eslint](https://babeljs.io)
-- Config file with added some rules for JSX / React 
+
+-   Config file with added some rules for JSX / React
 
 **Config**
 
     /code/scripts/react/.eslintrc
     /code/scripts/.eslintignore
+
 ---
+
 #### [Jest](https://jestjs.io/)
-- Base config for using Jest testing framework
-- [Eslint plugin for Jest](https://github.com/jest-community/eslint-plugin-jest)
+
+-   Base config for using Jest testing framework
+-   [Eslint plugin for Jest](https://github.com/jest-community/eslint-plugin-jest)
 
 **Config**
 

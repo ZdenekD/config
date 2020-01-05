@@ -1,9 +1,6 @@
 module.exports = {
     verbose: true,
-    moduleFileExtensions: [
-        'js',
-        'jsx',
-    ],
+    moduleFileExtensions: ['js', 'jsx'],
     clearMocks: true,
     collectCoverage: true,
     collectCoverageFrom: ['./assets/src/scripts/**/*.jsx'],

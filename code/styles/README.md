@@ -1,4 +1,5 @@
 ### [Stylelint](https://stylelint.io/)
+
 -   Base config for cross company use
 
 **Packages**
@@ -18,7 +19,9 @@
 
     /code/styles/.stylelintrc
     /code/styles/.stylelintignore
+
 ---
+
 ### [Postcss](https://postcss.org/)
 
 #### css
@@ -26,13 +29,17 @@
 **Config**
 
     /code/styles/css/postcss.config.js
+
 ---
+
 #### css modules
 
 **Config**
 
     /code/styles/css-modules/postcss.config.js
+
 ---
+
 ### [Cssnano](https://cssnano.co)
 
 -   CSS minification config

@@ -61,7 +61,8 @@ const ImageminPluginConfig = new ImageminPlugin({
         plugins: [
             {
                 removeViewBox: false,
-            }, {
+            },
+            {
                 cleanupIDs: true,
             },
         ],
@@ -70,13 +71,7 @@ const ImageminPluginConfig = new ImageminPlugin({
         quality: 90,
     },
 });
-const plugins = [
-    MiniCssExtractPluginConfig,
-    HtmlWebpackPluginConfig,
-    CopyWebpackPluginConfig,
-    HtmlReplaceWebpackPluginConfig,
-    ImageminPluginConfig,
-];
+const plugins = [MiniCssExtractPluginConfig, HtmlWebpackPluginConfig, CopyWebpackPluginConfig, HtmlReplaceWebpackPluginConfig, ImageminPluginConfig];
 
 module.exports = () => ({
     entry: config.entry,
@@ -113,7 +108,8 @@ module.exports = () => ({
                 use: [
                     {
                         loader: 'babel-loader?cacheDirectory',
-                    }, {
+                    },
+                    {
                         loader: 'eslint-loader',
                     },
                 ],
@@ -157,7 +153,7 @@ module.exports = () => ({
                         options: {
                             name: '[hash:base64:8].[ext]',
                         },
-                    }
+                    },
                 ],
             },
             {

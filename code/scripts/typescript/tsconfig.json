@@ -2,11 +2,7 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "moduleResolution": "node",
     "noImplicitAny": true,
     "strict": true,
@@ -20,12 +16,6 @@
     "sourceMap": true,
     "skipLibCheck": true
   },
-  "include": [
-    "./assets/scripts/*",
-    "./assets/scripts/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
-  ]
+  "include": ["./assets/scripts/*", "./assets/scripts/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }

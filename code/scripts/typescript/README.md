@@ -13,17 +13,22 @@
     eslint-plugin-jest
     jest
     ts-jest
+
 ---
+
 #### [Eslint](https://eslint.org/)
 
 **Config**
 
     /code/scripts/typescript/.eslintrc
     /code/scripts/.eslintignore
+
 ---
+
 #### [Jest](https://jestjs.io/)
-- Base config for using Jest testing framework
-- [Eslint plugin for Jest](https://github.com/jest-community/eslint-plugin-jest)
+
+-   Base config for using Jest testing framework
+-   [Eslint plugin for Jest](https://github.com/jest-community/eslint-plugin-jest)
 
 **Config**
 

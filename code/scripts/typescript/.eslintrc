@@ -10,33 +10,18 @@
       "jsx": true
     }
   },
-  "plugins": [
-    "@typescript-eslint",
-    "react-hooks"
-  ],
-  "extends": [
-    "airbnb-base",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:jest/recommended"
-  ],
+  "plugins": ["@typescript-eslint", "react-hooks"],
+  "extends": ["airbnb-base", "plugin:@typescript-eslint/recommended", "plugin:jest/recommended"],
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     }
   },
   "overrides": [
     {
-      "files": [
-        "*.ts",
-        "*.tsx"
-      ],
+      "files": ["*.ts", "*.tsx"],
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
         "ecmaVersion": 6,
@@ -63,20 +48,11 @@
       }
     ],
     // Require parens in arrow function arguments
-    "arrow-parens": [
-      "error",
-      "as-needed"
-    ],
+    "arrow-parens": ["error", "as-needed"],
     // Require braces in arrow function body
-    "arrow-body-style": [
-      "error",
-      "as-needed"
-    ],
+    "arrow-body-style": ["error", "as-needed"],
     // Disallow or enforce spaces inside of single line blocks
-    "block-spacing": [
-      "error",
-      "never"
-    ],
+    "block-spacing": ["error", "never"],
     // Require or disallow trailing commas
     "comma-dangle": [
       "error",
@@ -94,15 +70,9 @@
       }
     ],
     // Enforce consistent linebreak style
-    "linebreak-style": [
-      "error",
-      "unix"
-    ],
+    "linebreak-style": ["error", "unix"],
     // Enforce consistent spacing inside braces
-    "object-curly-spacing": [
-      "error",
-      "never"
-    ],
+    "object-curly-spacing": ["error", "never"],
     // Enforce a maximum line length
     "max-len": [
       "error",
@@ -118,11 +88,7 @@
     "no-console": [
       "error",
       {
-        "allow": [
-          "info",
-          "log",
-          "assert"
-        ]
+        "allow": ["info", "log", "assert"]
       }
     ],
     // Disallow the unary operators ++ and --
@@ -136,10 +102,7 @@
     "no-underscore-dangle": [
       "error",
       {
-        "allow": [
-          "_this",
-          "_id"
-        ],
+        "allow": ["_this", "_id"],
         "allowAfterThis": true,
         "allowAfterSuper": true
       }
@@ -154,40 +117,22 @@
       },
       {
         "blankLine": "always",
-        "prev": [
-          "const",
-          "let"
-        ],
+        "prev": ["const", "let"],
         "next": "*"
       },
       {
         "blankLine": "always",
         "prev": "*",
-        "next": [
-          "const",
-          "let"
-        ]
+        "next": ["const", "let"]
       },
       {
         "blankLine": "any",
-        "prev": [
-          "const",
-          "let"
-        ],
-        "next": [
-          "const",
-          "let"
-        ]
+        "prev": ["const", "let"],
+        "next": ["const", "let"]
       },
       {
         "blankLine": "always",
-        "prev": [
-          "if",
-          "for",
-          "while",
-          "switch",
-          "class"
-        ],
+        "prev": ["if", "for", "while", "switch", "class"],
         "next": "*"
       },
       {
@@ -202,10 +147,7 @@
       }
     ],
     // Enforce the consistent use of either backticks, double, or single quotes
-    "quotes": [
-      "error",
-      "single"
-    ],
+    "quotes": ["error", "single"],
     // Require or disallow a space before function parenthesis
     "space-before-function-paren": [
       "error",
@@ -234,9 +176,7 @@
       }
     ],
     // Explicit accessibility modifiers on class properties and methods are not required
-    "@typescript-eslint/explicit-member-accessibility": [
-      "off"
-    ],
+    "@typescript-eslint/explicit-member-accessibility": ["off"],
     // Off import errors (becauseof webpack config)
     "import/no-extraneous-dependencies": 1,
     "import/no-unresolved": 1,

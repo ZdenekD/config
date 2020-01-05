@@ -2,10 +2,12 @@ const fs = require('fs');
 const {url} = require('./localhost.json');
 
 const scenarios = [];
-const pages = [{
-    label: 'index',
-    file: 'index.html',
-}];
+const pages = [
+    {
+        label: 'index',
+        file: 'index.html',
+    },
+];
 
 fs.readdirSync('pages').forEach(file => {
     if (!fs.statSync(`pages/${file}`).isDirectory()) {
@@ -28,11 +30,13 @@ pages.forEach((page, i) => {
 module.exports = {
     id: 'project',
     fileNameTemplate: '{scenarioLabel}_{selectorIndex}_{viewportLabel}',
-    viewports: [{
-        label: '1600',
-        width: 1600,
-        height: 1200,
-    }],
+    viewports: [
+        {
+            label: '1600',
+            width: 1600,
+            height: 1200,
+        },
+    ],
     scenarios,
     paths: {
         bitmaps_reference: 'test/regression/bitmaps_reference',
