@@ -1,8 +1,9 @@
 ### [Webpack](https://webpack.js.org/)
-- Webpack builder config files
-- It loads configuration from `config.json` file in project root
-- It uses HMR (Hot Modules Reload) - for using it look at [HotLoader / React](https://github.com/gaearon/react-hot-loader#hot-loaderreact-dom)
-- It uses `postcss` and `css-modules`
+
+-   Webpack builder config files
+-   It loads configuration from `config.json` file in project root
+-   It uses HMR (Hot Modules Reload) - for using it look at [HotLoader / React](https://github.com/gaearon/react-hot-loader#hot-loaderreact-dom)
+-   It uses `postcss` and `css-modules`
 
 **Dependencies**
 
@@ -35,27 +36,36 @@
 
     "start": "NODE_ENV=development webpack-dev-server --mode development --color --compress --open",
     "build": "yarn clean && yarn format && NODE_ENV=production webpack --mode production"
+
 ---
+
 #### Without css file extract
-- Webpack config file without extracting css file (it's used e.g. if we send some component with styles to 3rd party customer)
+
+-   Webpack config file without extracting css file (it's used e.g. if we send some component with styles to 3rd party customer)
 
 **Config**
 
     /project/builder/webpack/no-css-extract/webpack.config.babel.js
+
 ---
+
 #### With css file extract
 
 **Config**
 
     /project/builder/webpack/css-extract/webpack.config.babel.js
+
 ---
+
 #### With favicons generator
 
 **Config**
 
     /project/builder/webpack/ico-generate/webpack.config.babel.js
     /project/builder/webpack/ico-generate/config.json
+
 ---
+
 #### With js dynamic loadable scripts
 
 **Config**

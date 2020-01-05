@@ -13,10 +13,7 @@ module.exports = {
         quality: 90,
     },
     svgo: {
-        plugins: [
-            {removeViewBox: false},
-            {cleanupIDs: true},
-        ],
+        plugins: [{removeViewBox: false}, {cleanupIDs: true}],
     },
     webp: {
         quality: 90,

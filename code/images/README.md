@@ -1,5 +1,6 @@
 ### [Imagemin](https://github.com/imagemin/imagemin)
-- Image optimization config
+
+-   Image optimization config
 
 **Config**
 

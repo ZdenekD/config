@@ -1,28 +1,36 @@
 #### [Babel](https://babeljs.io)
-- Some recommended/interesting packages
-    - [@babel/plugin-proposal-object-rest-spread](https://github.com/tc39/proposal-object-rest-spread)
-    - [@babel/plugin-proposal-class-properties](https://babeljs.io/docs/en/babel-plugin-proposal-class-properties)
-    - [@babel/plugin-proposal-optional-chaining](https://github.com/tc39/proposal-optional-chaining)
-    - [@babel/plugin-proposal-nullish-coalescing-operator](https://github.com/tc39/proposal-nullish-coalescing)
-    - [@babel/plugin-proposal-private-methods](https://github.com/tc39/proposal-private-methods)
-    - [@babel/plugin-syntax-dynamic-import](https://babeljs.io/docs/en/next/babel-plugin-syntax-dynamic-import.html)
+
+-   Some recommended/interesting packages
+    -   [@babel/plugin-proposal-object-rest-spread](https://github.com/tc39/proposal-object-rest-spread)
+    -   [@babel/plugin-proposal-class-properties](https://babeljs.io/docs/en/babel-plugin-proposal-class-properties)
+    -   [@babel/plugin-proposal-optional-chaining](https://github.com/tc39/proposal-optional-chaining)
+    -   [@babel/plugin-proposal-nullish-coalescing-operator](https://github.com/tc39/proposal-nullish-coalescing)
+    -   [@babel/plugin-proposal-private-methods](https://github.com/tc39/proposal-private-methods)
+    -   [@babel/plugin-syntax-dynamic-import](https://babeljs.io/docs/en/next/babel-plugin-syntax-dynamic-import.html)
 
 ### Vanilla javascript
+
 [documentation](./javascript/README.md)
 
 ### React
+
 [documentation](./react/README.md)
 
 ### Typescript
+
 [documentation](./typescript/README.md)
 
 ---
+
 ### [Flow](https://flow.org/)
+
 // TODO
 
 ---
+
 ### [Prettier](https://prettier.io)
-- Code formatter
+
+-   Code formatter
 
 **Config**
 
@@ -34,8 +42,10 @@
     prettier
 
 ---
+
 ### [JSDOC](https://jsdoc.app/)
-- JS documentation generator
+
+-   JS documentation generator
 
 **Config**
 

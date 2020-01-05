@@ -1,0 +1,58 @@
+{
+  "editor.folding": false,
+  "editor.fontSize": 12,
+  "editor.formatOnSave": true,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.matchBrackets": "always",
+  "editor.minimap.enabled": false,
+  "editor.occurrencesHighlight": false,
+  "editor.renderIndentGuides": false,
+  "editor.renderLineHighlight": "none",
+  "editor.tabSize": 4,
+  "editor.renderWhitespace": "all",
+  "editor.wordWrapColumn": 120,
+  "editor.fastScrollSensitivity": 10,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "explorer.autoReveal": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.openEditors.visible": 0,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "window.zoomLevel": 0,
+  "workbench.activityBar.visible": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "emmet.showExpandedAbbreviation": "never",
+  "emmet.includeLanguages": {
+    "postcss": "css"
+  },
+  "emmet.syntaxProfiles": {
+    "postcss": "css"
+  },
+  "breadcrumbs.enabled": true,
+  "workbench.colorTheme": "Material Theme High Contrast",
+  "workbench.iconTheme": "material-icon-theme",
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+  "javascript.preferences.quoteStyle": "single",
+  "eslint.validate": ["html", "javascript", "javascriptreact"],
+  "eslint.alwaysShowStatus": true,
+  "eslint.lintTask.enable": true,
+  "eslint.run": "onSave",
+  "css.validate": false,
+  "scss.validate": false,
+  "[html]": {
+    "editor.formatOnSave": false
+  },
+  "eslint.packageManager": "yarn",
+  "files.insertFinalNewline": true,
+  "webhint.enableTelemetry": "disabled",
+  "emmet.triggerExpansionOnTab": true,
+  "prettier.requireConfig": true,
+  "prettier.configPath": ".prettierrc",
+  "prettier.packageManager": "yarn",
+  "prettier.printWidth": 160,
+  "prettier.singleQuote": true,
+  "prettier.tabWidth": 4,
+  "prettier.trailingComma": "all"
+}

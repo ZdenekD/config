@@ -1,6 +1,7 @@
 ### [BackstopJS](https://github.com/garris/BackstopJS)
-- Visual regression testing comparing DOM screenshots
-- Settings go through node script. It's needed to have `localhost.json` file with local url (where can we found html files to test)
+
+-   Visual regression testing comparing DOM screenshots
+-   Settings go through node script. It's needed to have `localhost.json` file with local url (where can we found html files to test)
 
 **Node script**
 
@@ -9,10 +10,13 @@
 **Packages**
 
     backstopjs
+
 ---
+
 ### [Pa11y](https://pa11y.org/)
-- Accessibility tests
-- Settings go through node script. It's needed to have `config.json` file with settings
+
+-   Accessibility tests
+-   Settings go through node script. It's needed to have `config.json` file with settings
 
 **Node script**
 
@@ -22,9 +26,12 @@
 
     pa11y
     pa11y-reporter-html
+
 ---
+
 ### [TestCafe](https://devexpress.github.io/testcafe/)
-- End-to-end web testing
+
+-   End-to-end web testing
 
 **Config**
 
@@ -33,9 +40,12 @@
 **Packages**
 
     testcafe
+
 ---
+
 ### [Webhint](https://webhint.io)
-- Complex site tests
+
+-   Complex site tests
 
 **Config**
 

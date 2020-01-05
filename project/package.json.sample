@@ -14,16 +14,31 @@
     "clean": "rm -rf ./dist/*",
     "reinstall": "rm -rf 'yarn.lock' 'package-lock.json' 'node_modules' && yarn",
     "start": "NODE_ENV=development webpack-dev-server --mode development --color --compress --open",
-    "format:scripts": "eslint --cache --ext .js,.jsx --fix ./",
-    "format:styles": "stylelint --cache \"**/*.css\" --fix --color --formatter verbose",
-    "format:prettier": "prettier --write '**/*.{json,md,yml,html}'",
-    "format": "yarn format:scripts && yarn format:styles && yarn format:prettier",
     "build": "yarn clean && NODE_ENV=production webpack --mode production",
     "test:js": "jest",
     "test:js:watch": "jest --watch",
     "test:snyk": "snyk monitor",
     "test:webhint": "hint http://localhost:3000",
     "test:packages": "yarn outdated"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --cache --fix",
+      "git add"
+    ],
+    "*.css": [
+      "stylelint --cache --fix --color --formatter verbose",
+      "git add"
+    ],
+    "*.{json,md,yml,html}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "engines": {
     "node": ">=10.13.0",

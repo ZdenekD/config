@@ -10,21 +10,21 @@
 
 ## Content
 
-- [CHECKLIST](#checklist)
-  - [Project](#project)
-  - [Head](#head)
-  - [HTML](#html)
-  - [Styles](#styles)
-  - [Scripts](#scripts)
-  - [Fonts](#fonts)
-  - [Images](#images)
-  - [Server](#server)
-  - [Security](#security)
-  - [Performance](#performance)
-  - [Accessibility](#accessibility)
-  - [SEO](#seo)
-  - [Test](#test)
-  - [Others](#others)
+-   [CHECKLIST](#checklist)
+    -   [Project](#project)
+    -   [Head](#head)
+    -   [HTML](#html)
+    -   [Styles](#styles)
+    -   [Scripts](#scripts)
+    -   [Fonts](#fonts)
+    -   [Images](#images)
+    -   [Server](#server)
+    -   [Security](#security)
+    -   [Performance](#performance)
+    -   [Accessibility](#accessibility)
+    -   [SEO](#seo)
+    -   [Test](#test)
+    -   [Others](#others)
 
 ## Project
 
@@ -51,22 +51,19 @@
 [ ] **Doctype:** ![High][high] The Doctype is HTML5 and is at the top of all your HTML pages.
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 ```
 
 [ ] **Charset:** ![High][high] The charset (UTF-8) is declared correctly.
 
 ```html
-<meta charset="utf-8">
+<meta charset="utf-8" />
 ```
 
 [ ] **Viewport:** ![High][high] The viewport is declared correctly.
 
 ```html
-<meta
-    name="viewport"
-    content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, shrink-to-fit=no"
->
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, shrink-to-fit=no" />
 ```
 
 [ ] **Title:** ![High][high] A title is used on all pages (SEO: Google calculates the pixel width of the characters used in the title, and it cuts off between 472 and 482 pixels. The average character limit would be around 55-characters).
@@ -78,7 +75,7 @@
 [ ] **Description:** ![High][high] A meta description is provided, it is unique and doesn't possess more than 150 characters.
 
 ```html
-<meta name="description" content="Description">
+<meta name="description" content="Description" />
 ```
 
 [ ] **Place CSS tags always before JavaScript tags:** ![High][high] Ensure that your CSS is always loaded before having JavaScript code.
@@ -88,123 +85,34 @@
 -   [FaviconGenerator](https://realfavicongenerator.net/)
 
 ```html
-<link rel="icon" href="https://example.com/favicon.ico" type="image/x-icon">
-<link rel="icon" href="https://example.com/favicon.png" type="image/png">
-<link
-    rel="apple-touch-icon"
-    sizes="57x57"
-    href="https://example.com/apple-touch-icon-57x57.png"
->
-<link
-    rel="apple-touch-icon"
-    sizes="60x60"
-    href="https://example.com/apple-touch-icon-60x60.png"
->
-<link
-    rel="apple-touch-icon"
-    sizes="72x72"
-    href="https://example.com/apple-touch-icon-72x72.png"
->
-<link
-    rel="apple-touch-icon"
-    sizes="76x76"
-    href="https://example.com/apple-touch-icon-76x76.png"
->
-<link
-    rel="apple-touch-icon"
-    sizes="114x114"
-    href="https://example.com/apple-touch-icon-114x114.png"
->
-<link
-    rel="apple-touch-icon"
-    sizes="120x120"
-    href="https://example.com/apple-touch-icon-120x120.png"
->
-<link
-    rel="apple-touch-icon"
-    sizes="144x144"
-    href="https://example.com/apple-touch-icon-144x144.png"
->
-<link
-    rel="apple-touch-icon"
-    sizes="152x152"
-    href="https://example.com/apple-touch-icon-152x152.png"
->
-<link
-    rel="apple-touch-icon"
-    sizes="180x180"
-    href="https://example.com/apple-touch-icon-180x180.png"
->
-<link
-    rel="icon"
-    type="image/png"
-    href="https://example.com/android-chrome-36x36.png"
-    sizes="36x36"
->
-<link
-    rel="icon"
-    type="image/png"
-    href="https://example.com/android-chrome-48x48.png"
-    sizes="48x48"
->
-<link
-    rel="icon"
-    type="image/png"
-    href="https://example.com/android-chrome-72x72.png"
-    sizes="72x72"
->
-<link
-    rel="icon"
-    type="image/png"
-    href="https://example.com/android-chrome-96x96.png"
-    sizes="96x96"
->
-<link
-    rel="icon"
-    type="image/png"
-    href="https://example.com/android-chrome-144x144.png"
-    sizes="144x144"
->
-<link
-    rel="icon"
-    type="image/png"
-    href="https://example.com/android-chrome-192x192.png"
-    sizes="192x192"
->
-<link
-    rel="icon"
-    type="image/png"
-    href="https://example.com/android-chrome-256x256.png"
-    sizes="256x256"
->
-<link
-    rel="icon"
-    type="image/png"
-    href="https://example.com/favicon-16x16.png"
-    sizes="16x16"
->
-<link
-    rel="icon"
-    type="image/png"
-    href="https://example.com/favicon-32x32.png"
-    sizes="32x32"
->
-<link
-    rel="icon"
-    type="image/png"
-    href="https://example.com/favicon-194x194.png"
-    sizes="194x194"
->
-<link rel="mask-icon" href="https://example.com/safari-pinned-tab.svg">
+<link rel="icon" href="https://example.com/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="https://example.com/favicon.png" type="image/png" />
+<link rel="apple-touch-icon" sizes="57x57" href="https://example.com/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="60x60" href="https://example.com/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="https://example.com/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="https://example.com/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="https://example.com/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="https://example.com/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="https://example.com/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="https://example.com/apple-touch-icon-152x152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="https://example.com/apple-touch-icon-180x180.png" />
+<link rel="icon" type="image/png" href="https://example.com/android-chrome-36x36.png" sizes="36x36" />
+<link rel="icon" type="image/png" href="https://example.com/android-chrome-48x48.png" sizes="48x48" />
+<link rel="icon" type="image/png" href="https://example.com/android-chrome-72x72.png" sizes="72x72" />
+<link rel="icon" type="image/png" href="https://example.com/android-chrome-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="https://example.com/android-chrome-144x144.png" sizes="144x144" />
+<link rel="icon" type="image/png" href="https://example.com/android-chrome-192x192.png" sizes="192x192" />
+<link rel="icon" type="image/png" href="https://example.com/android-chrome-256x256.png" sizes="256x256" />
+<link rel="icon" type="image/png" href="https://example.com/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="https://example.com/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://example.com/favicon-194x194.png" sizes="194x194" />
+<link rel="mask-icon" href="https://example.com/safari-pinned-tab.svg" />
 ```
 
 [ ] **Canonical:** ![Medium][medium] Use `rel="canonical"` to avoid duplicate content.
 
 ```html
-<link
-    rel="canonical"
-    href="http://example.com/2017/09/a-new-article-to-read.html"
->
+<link rel="canonical" href="http://example.com/2017/09/a-new-article-to-read.html" />
 ```
 
 [ ] **CSS Critical:** ![Medium][medium] The CSS critical (or "above the fold") collects all the CSS used to render the visible portion of the page. It is embedded before your principal CSS call and between `<style></style>` in a single line (minified).
@@ -212,8 +120,7 @@
 [ ] **Apple Web App Meta:** ![Low][low] Apple meta-tags are present.
 
 ```html
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-capable" content="yes" /> <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 ```
 
 [ ] **Windows Tiles:** ![Low][low] Windows tiles are present and linked.
@@ -243,15 +150,15 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 -   [OpenGraph](http://ogp.me/)
 
 ```html
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://example.com/page.html">
-<meta property="og:title" content="Content Title">
-<meta property="og:image" content="https://example.com/image.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:description" content="Description Here">
-<meta property="og:site_name" content="Site Name">
-<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://example.com/page.html" />
+<meta property="og:title" content="Content Title" />
+<meta property="og:image" content="https://example.com/image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:description" content="Description Here" />
+<meta property="og:site_name" content="Site Name" />
+<meta property="og:locale" content="en_US" />
 ```
 
 [ ] **Twitter Card:** ![Low][low]
@@ -259,16 +166,13 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 -   [TwitterCards](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards)
 
 ```html
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@site_account">
-<meta name="twitter:creator" content="@individual_account">
-<meta name="twitter:url" content="https://example.com/page.html">
-<meta name="twitter:title" content="Content Title">
-<meta
-    name="twitter:description"
-    content="Content description less than 200 characters"
->
-<meta name="twitter:image" content="https://example.com/image.jpg">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@site_account" />
+<meta name="twitter:creator" content="@individual_account" />
+<meta name="twitter:url" content="https://example.com/page.html" />
+<meta name="twitter:title" content="Content Title" />
+<meta name="twitter:description" content="Content description less than 200 characters" />
+<meta name="twitter:image" content="https://example.com/image.jpg" />
 ```
 
 ---
@@ -284,7 +188,7 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 [ ] **Language attribute:** ![High][high] The `lang` attribute of your website is specified and related to the language of the current page.
 
 ```html
-<html lang="en">
+<html lang="en"></html>
 ```
 
 [ ] **Error pages:** ![High][high] Error 404 page and 5xx exist. Remember that the 5xx error pages need to have their CSS integrated (no external call on the current server).
@@ -473,13 +377,13 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 [ ] **DNS resolution:** ![Low][low] DNS of third-party services that may be needed are resolved in advance during idle time using `dns-prefetch`.
 
 ```html
-<link rel="dns-prefetch" href="https://example.com">
+<link rel="dns-prefetch" href="https://example.com" />
 ```
 
 [ ] **Preconnection:** ![Low][low] DNS lookup, TCP handshake and TLS negotiation with services that will be needed soon is done in advance during idle time using `preconnect`.
 
 ```html
-<link rel="preconnect" href="https://example.com">
+<link rel="preconnect" href="https://example.com" />
 ```
 
 [ ] **Prefetching:** ![Low][low] Resources that will be needed soon (e.g. lazy loaded images) are requested in advance during idle time using `prefetch`.
@@ -487,13 +391,13 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 -   [Prefetch|Preload](https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf)
 
 ```html
-<link rel="prefetch" href="image.png">
+<link rel="prefetch" href="image.png" />
 ```
 
 [ ] **Preloading:** ![Low][low] Resources needed in the current page (e.g. scripts placed at the end of `<body>`) in advance using `preload`.
 
 ```html
-<link rel="preload" href="app.js">
+<link rel="preload" href="app.js" />
 ```
 
 ---
@@ -549,8 +453,8 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 
 ```html
 <!-- Example: Pagination link tags for page 2 of a paginated list -->
-<link rel="prev" href="https://example.com/?page=1">
-<link rel="next" href="https://example.com/?page=3">
+<link rel="prev" href="https://example.com/?page=1" />
+<link rel="next" href="https://example.com/?page=3" />
 ```
 
 ---
