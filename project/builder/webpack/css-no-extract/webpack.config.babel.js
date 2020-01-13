@@ -154,7 +154,7 @@ module.exports = () => ({
                     {
                         loader: 'file-loader',
                         options: {
-                            name: '[hash:base64:8].[ext]',
+                            name: 'images/[hash:base64:8].[ext]',
                         },
                     },
                 ],
@@ -166,7 +166,7 @@ module.exports = () => ({
                     {
                         loader: 'file-loader',
                         options: {
-                            name: '[hash:base64:8].[ext]',
+                            name: 'fonts/[hash:base64:8].[ext]',
                         },
                     },
                 ],
