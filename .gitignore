@@ -9,6 +9,9 @@ dist/
 build/
 public/
 
+# Database
+/db
+
 # Logs
 logs
 npm-debug.log*
