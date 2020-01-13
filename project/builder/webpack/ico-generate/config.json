@@ -5,7 +5,10 @@
   "output": {
     "dir": "./dist"
   },
-  "public": "public",
+  "public": {
+    "images": "public/images",
+    "fonts": "public/fonts"
+  },
   "favicons": {
     "logo": "./favicon.png",
     "prefix": "[hash:base64:8]",

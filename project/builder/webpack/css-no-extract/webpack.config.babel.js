@@ -25,13 +25,13 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 });
 const CopyWebpackPluginConfig = new CopyWebpackPlugin([
     {
-        from: `${config.public}/images`,
+        from: config.public.images,
         to: 'images',
     },
 ]);
 const HtmlReplaceWebpackPluginConfig = new HtmlReplaceWebpackPlugin([
     {
-        pattern: `${config.public}/images/`,
+        pattern: config.public.images,
         replacement: 'images/',
     },
 ]);

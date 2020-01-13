@@ -1,5 +1,7 @@
 import path from 'path';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
+import HtmlReplaceWebpackPlugin from 'html-replace-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ImageminPlugin from 'imagemin-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
@@ -33,6 +35,18 @@ const MiniCssExtractPluginConfig = new MiniCssExtractPlugin({
     filename: '[name].[hash].css',
     chunkFilename: '[id].[hash].css',
 });
+const CopyWebpackPluginConfig = new CopyWebpackPlugin([
+    {
+        from: config.public.images,
+        to: 'images',
+    },
+]);
+const HtmlReplaceWebpackPluginConfig = new HtmlReplaceWebpackPlugin([
+    {
+        pattern: config.public.images,
+        replacement: 'images/',
+    },
+]);
 const ImageminPluginConfig = new ImageminPlugin({
     disable: !isProduction,
     context: 'src',
@@ -64,7 +78,14 @@ const ImageminPluginConfig = new ImageminPlugin({
         quality: 90,
     },
 });
-const plugins = [MiniCssExtractPluginConfig, HtmlWebpackPluginConfig, FaviconsWebpackPluginConfig, ImageminPluginConfig];
+const plugins = [
+    MiniCssExtractPluginConfig,
+    HtmlWebpackPluginConfig,
+    FaviconsWebpackPluginConfig,
+    CopyWebpackPluginConfig,
+    HtmlReplaceWebpackPluginConfig,
+    ImageminPluginConfig,
+];
 
 module.exports = () => ({
     entry: config.entry,

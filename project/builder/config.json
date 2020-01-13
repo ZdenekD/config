@@ -5,5 +5,8 @@
   "output": {
     "dir": "./dist"
   },
-  "public": "public"
+  "public": {
+    "images": "public/images",
+    "fonts": "public/fonts"
+  }
 }
