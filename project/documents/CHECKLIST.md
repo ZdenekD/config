@@ -38,11 +38,9 @@
 
 [ ] **Snyk.io** ![Medium][medium] Project is added to Snyk to catch some vulnerabilities
 
+-   [snyk.io](https://app.snyk.io/org/zdenekd)
+
 [ ] **Clean up comments:** ![Low][low] Unnecessary code needs to be removed before sending the page to production.
-
-[ ] **Add humans.txt** ![Low][low] We are people, not machines :]
-
--   [humans.txt](http://humanstxt.org/)
 
 ---
 
@@ -63,7 +61,7 @@
 [ ] **Viewport:** ![High][high] The viewport is declared correctly.
 
 ```html
-<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, shrink-to-fit=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
 ```
 
 [ ] **Title:** ![High][high] A title is used on all pages (SEO: Google calculates the pixel width of the characters used in the title, and it cuts off between 472 and 482 pixels. The average character limit would be around 55-characters).
@@ -227,7 +225,6 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 [ ] **Analyse stylesheets complexity:** ![Medium][medium] Analyzing your stylesheets can help you to flag issues, redundancies and duplicate CSS selectors.
 
 -   [CSSstats](https://cssstats.com)
--   [Analyze CSS](https://github.com/macbre/analyze-css)
 
 [ ] **CSS Print:** ![Medium][medium] A print stylesheet is provided and is correct on each page.
 
@@ -312,8 +309,6 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 -   [How to Build Responsive Images with srcset](https://www.sitepoint.com/how-to-build-responsive-images-with-srcset/)
 
 [ ] **Images dimensions:** ![Medium][medium] Set width and height attributes on <img> if the final rendered image size is known.
-
-[ ] **Sprite:** ![Medium][medium] Small images are in a sprite file (in the case of icons, they can be in an SVG sprite image).
 
 [ ] **Retina:** ![Low][low] You provide layout images 2x or 3x, support retina display.
 
