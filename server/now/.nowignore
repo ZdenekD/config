@@ -1,0 +1,8 @@
+.editorconfig
+.eslintcache
+.hintrc
+.htaccess
+.stylelintcache
+CHECKLIST.md
+README.md
+buildspec.yml

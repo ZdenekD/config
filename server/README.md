@@ -6,13 +6,13 @@
 
 ---
 
-### Apache for webpack
+### Apache for singlepage
 
 -   root target to /dist (folder with built assets)
 
 **Config**
 
-    /server/apache/webpack/.htaccess
+    /server/apache/singlepage/.htaccess
 
 ---
 
@@ -25,3 +25,23 @@
 **Config**
 
     /server/aws/codebuild/react/buildspec.yml
+
+---
+
+### [Now](https://zeit.co/dashboard)
+
+### Now for singlepage
+
+-   config file for single-page routes (everything goes through index.html)
+
+**Config**
+
+    /server/now/singlepage/now.json
+
+#### Now ignore file
+
+-   Ignore files not necessary for building on zeit.co
+
+**Config**
+
+    /server/now/.nowignore
