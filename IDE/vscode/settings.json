@@ -15,44 +15,56 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "explorer.autoReveal": false,
+  "explorer.autoReveal": true,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 0,
-  "typescript.updateImportsOnFileMove.enabled": "always",
   "window.zoomLevel": 0,
+  "window.menuBarVisibility": "toggle",
   "workbench.activityBar.visible": true,
   "workbench.startupEditor": "newUntitledFile",
-  "emmet.showExpandedAbbreviation": "never",
+  "workbench.colorTheme": "Material Theme High Contrast",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.sideBar.location": "right",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "breadcrumbs.enabled": true,
+  "material-icon-theme.hidesExplorerArrows": true,
+  "material-icon-theme.showWelcomeMessage": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.triggerExpansionOnTab": true,
   "emmet.includeLanguages": {
     "postcss": "css"
   },
   "emmet.syntaxProfiles": {
     "postcss": "css"
   },
-  "breadcrumbs.enabled": true,
-  "workbench.colorTheme": "Material Theme High Contrast",
-  "workbench.iconTheme": "material-icon-theme",
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "javascript.preferences.quoteStyle": "single",
   "eslint.validate": ["html", "javascript", "javascriptreact"],
-  "eslint.alwaysShowStatus": true,
   "eslint.lintTask.enable": true,
   "eslint.run": "onSave",
+  "eslint.packageManager": "yarn",
+  "eslint.format.enable": true,
   "css.validate": false,
   "scss.validate": false,
-  "[html]": {
-    "editor.formatOnSave": false
-  },
-  "eslint.packageManager": "yarn",
-  "files.insertFinalNewline": true,
-  "webhint.enableTelemetry": "disabled",
-  "emmet.triggerExpansionOnTab": true,
   "prettier.requireConfig": true,
   "prettier.configPath": ".prettierrc",
   "prettier.packageManager": "yarn",
   "prettier.printWidth": 160,
   "prettier.singleQuote": true,
   "prettier.tabWidth": 4,
-  "prettier.trailingComma": "all"
+  "prettier.trailingComma": "all",
+  "prettier.bracketSpacing": false,
+  "tslint.packageManager": "yarn",
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[html]": {
+    "editor.formatOnSave": false
+  },
+  "markdown.extension.preview.autoShowPreviewToSide": true,
+  "markdown.extension.toc.githubCompatibility": true,
+  "webhint.enableTelemetry": "disabled"
 }
