@@ -41,3 +41,20 @@
 **Config**
 
     /code/scripts/javascript/jest/jest.config.js
+
+---
+
+-   Setup file for using `jest` with [Enzyme](https://airbnb.io/enzyme/)
+
+**Setup**
+
+    /code/scripts/utils/enzyme.js
+
+---
+
+-   Transform helpers
+
+**Helpers**
+
+    /code/scripts/utils/transform/css.js
+    /code/scripts/utils/transform/file.js
