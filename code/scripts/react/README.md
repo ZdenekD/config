@@ -43,6 +43,7 @@
 
 -   Base config for using Jest testing framework
 -   [Eslint plugin for Jest](https://github.com/jest-community/eslint-plugin-jest)
+-   [Babel remove attributes](https://www.npmjs.com/package/babel-plugin-react-remove-properties) - remove `data-test` attributes for production (babel-plugin-react-remove-properties)
 
 **Config**
 

@@ -3,10 +3,12 @@ module.exports = {
     transform: {
         '^.+\\.ts(x)?$': 'ts-jest',
     },
+    roots: ['<rootDir>/src'],
     moduleFileExtensions: ['ts', 'tsx'],
+    testMatch: ['<rootDir>/src/**/*.{spec,test}.{ts,tsx}'],
     clearMocks: true,
     collectCoverage: true,
-    collectCoverageFrom: ['./assets/scripts/**/*.ts', './assets/scripts/**/*.tsx'],
-    coverageDirectory: './test/coverage',
+    collectCoverageFrom: ['src/**/*.{ts,tsx}', '!src/**/*.d.ts'],
+    coverageDirectory: './__tests__/coverage',
     coverageReporters: ['html'],
 };

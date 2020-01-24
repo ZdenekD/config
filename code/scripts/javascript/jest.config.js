@@ -1,9 +1,11 @@
 module.exports = {
     verbose: true,
-    moduleFileExtensions: ['js'],
+    roots: ['<rootDir>/src'],
+    moduleFileExtensions: ['js', 'jsx'],
+    testMatch: ['<rootDir>/src/**/*.{spec,test}.{js,jsx}'],
     clearMocks: true,
     collectCoverage: true,
-    collectCoverageFrom: ['./assets/src/scripts/**/*.js'],
-    coverageDirectory: './test/coverage',
+    collectCoverageFrom: ['src/**/*.{js,jsx}'],
+    coverageDirectory: './__tests__/coverage',
     coverageReporters: ['html'],
 };
