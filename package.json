@@ -4,20 +4,21 @@
   "repository": "git@github.com:ZdenekD/config.git",
   "author": "ZdenekD <ditezdenek@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "reinstall": "rm -rf 'yarn.lock' 'package-lock.json' 'node_modules' && yarn"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
   },
-  "lint-staged": {
-    "**/*.{html,css,js,json,yml,md}": [
-      "prettier --write",
-      "git add"
-    ]
+  "engines": {
+    "node": ">=12.0.0",
+    "npm": ">=6.9.0"
   },
   "devDependencies": {
     "husky": "^3.1.0",
-    "lint-staged": "^9.5.0",
+    "lint-staged": "^10.0.2",
     "prettier": "^1.19.1"
   }
 }
