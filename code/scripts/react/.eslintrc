@@ -58,6 +58,16 @@
     ],
     // Enforce consistent linebreak style
     "linebreak-style": ["error", "unix"],
+    // Enforce consistent line breaks inside braces
+    "object-curly-newline": [
+      "error",
+      {
+        "ObjectExpression": {"multiline": true, "minProperties": 3},
+        "ObjectPattern": {"multiline": true},
+        "ImportDeclaration": "never",
+        "ExportDeclaration": {"multiline": true, "minProperties": 3}
+      }
+    ],
     // Enforce consistent spacing inside braces
     "object-curly-spacing": ["error", "never"],
     // Enforce a maximum line length
