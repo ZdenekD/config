@@ -6,3 +6,6 @@
 CHECKLIST.md
 README.md
 buildspec.yml
+__tests__
+**/*.spec.js
+**/*.test.js

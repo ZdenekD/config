@@ -25,26 +25,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn test && lint-staged"
+      "pre-commit": "lint-staged"
     }
   },
-  "lint-staged": {
-    "*.{js,jsx}": [
-      "eslint --cache --fix",
-      "git add"
-    ],
-    "*.css": [
-      "stylelint --cache --fix --color --formatter verbose",
-      "git add"
-    ],
-    "*.{json,md,yml,html}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "engines": {
-    "node": ">=10.13.0",
-    "npm": ">=6.4.1"
+    "node": ">=12.0.0",
+    "npm": ">=6.9.0"
   },
   "devDependencies": {},
   "dependencies": {}
