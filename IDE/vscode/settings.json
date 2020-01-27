@@ -13,7 +13,8 @@
   "editor.wordWrapColumn": 120,
   "editor.fastScrollSensitivity": 10,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
   },
   "explorer.autoReveal": true,
   "explorer.confirmDelete": false,
@@ -35,7 +36,8 @@
   "emmet.showSuggestionsAsSnippets": true,
   "emmet.triggerExpansionOnTab": true,
   "emmet.includeLanguages": {
-    "postcss": "css"
+    "postcss": "css",
+    "javascript": "javascriptreact"
   },
   "emmet.syntaxProfiles": {
     "postcss": "css"
@@ -47,6 +49,7 @@
   "eslint.run": "onSave",
   "eslint.packageManager": "yarn",
   "eslint.format.enable": true,
+  "stylelint.packageManager": "yarn",
   "css.validate": false,
   "scss.validate": false,
   "prettier.requireConfig": true,
@@ -64,7 +67,12 @@
   "[html]": {
     "editor.formatOnSave": false
   },
-  "markdown.extension.preview.autoShowPreviewToSide": true,
   "markdown.extension.toc.githubCompatibility": true,
-  "webhint.enableTelemetry": "disabled"
+  "webhint.enableTelemetry": "disabled",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
