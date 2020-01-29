@@ -19,6 +19,7 @@
         file-loader
         postcss-loader
         style-loader
+        @svgr/webpack
 
     Plugins
         copy-webpack-plugin
