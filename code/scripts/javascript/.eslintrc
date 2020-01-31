@@ -8,7 +8,6 @@
   "parserOptions": {
     "sourceType": "module"
   },
-  "plugins": ["jest"],
   "extends": ["airbnb-base", "plugin:jest/recommended"],
   "rules": {
     // Enforce line breaks between array elements
