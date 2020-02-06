@@ -1,6 +1,7 @@
 {
   "editor.folding": false,
   "editor.fontSize": 12,
+  "editor.colorDecorators": false,
   "editor.formatOnSave": true,
   "editor.hideCursorInOverviewRuler": true,
   "editor.matchBrackets": "always",
@@ -43,6 +44,7 @@
     "postcss": "css"
   },
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
   "javascript.preferences.quoteStyle": "single",
   "eslint.validate": ["html", "javascript", "javascriptreact"],
   "eslint.lintTask.enable": true,
@@ -60,15 +62,19 @@
   "prettier.tabWidth": 4,
   "prettier.trailingComma": "all",
   "prettier.bracketSpacing": false,
+  "prettier.htmlWhitespaceSensitivity": "strict",
   "tslint.packageManager": "yarn",
-  "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+  "[css]": {
+    "editor.formatOnSave": false
   },
   "[html]": {
     "editor.formatOnSave": false
   },
   "markdown.extension.toc.githubCompatibility": true,
   "webhint.enableTelemetry": "disabled",
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
