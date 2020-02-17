@@ -17,16 +17,9 @@
     "build": "yarn clean && NODE_ENV=production webpack --mode production",
     "test:js": "jest",
     "test:js:watch": "jest --watch",
-    "test:security": "yarn test:audit && yarn test:snyk",
-    "test:audit": "yarn audit",
-    "test:snyk": "snyk monitor",
-    "test:webhint": "hint http://localhost:3000",
-    "test:packages": "yarn outdated"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "test:js:coverage": "jest --coverage",
+    "test:cypress": "cypress open",
+    "test:webhint": "hint http://localhost:3000"
   },
   "engines": {
     "node": ">=12.0.0",

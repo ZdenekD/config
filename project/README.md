@@ -71,15 +71,24 @@ Environment settings
 
 -   Projects `package.json` sample file with some important records and tasks
 
+**Config**
+
+    /project/package.json.sample
+
 -   [Webhint](https://webhint.io)
     -   install: `yarn add -D hint`
 -   [Husky](https://github.com/typicode/husky)
     -   run git commands from package (e.g. pre-commit)
     -   install: `yarn add -D husky`
+
+**Config**
+
+    /project/.huskyrc.sample
+
 -   [lint-staged](https://github.com/okonet/lint-staged)
     -   run linters only on staged files before commit
     -   install: `yarn add -D lint-staged`
 
 **Config**
 
-    /project/package.json.sample
+    /project/.lintstagedrc.sample
