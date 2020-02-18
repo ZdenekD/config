@@ -7,11 +7,6 @@
   "scripts": {
     "reinstall": "rm -rf 'yarn.lock' 'package-lock.json' 'node_modules' && yarn"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "engines": {
     "node": ">=12.0.0",
     "npm": ">=6.9.0"
