@@ -13,6 +13,7 @@
     eslint-plugin-jest
     jest
     ts-jest
+    jest-serializer-html
 
 ---
 

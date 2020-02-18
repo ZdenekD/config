@@ -6,7 +6,10 @@
     @babel/preset-env
     @babel/preset-react
     babel-eslint
+    babel-jest
     core-js@3
+    enzyme
+    enzyme-adapter-react-16
     eslint
     eslint-config-airbnb-base
     eslint-plugin-import
@@ -15,6 +18,8 @@
     eslint-plugin-react
     eslint-plugin-react-hooks
     jest
+    jest-enzyme
+    jest-serializer-html
 
 ---
 

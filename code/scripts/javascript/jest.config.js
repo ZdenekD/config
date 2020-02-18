@@ -14,4 +14,5 @@ module.exports = {
     coverageDirectory: './__test__/coverage',
     coverageReporters: ['html'],
     setupFiles: ['<rootDir>/__test__/utils/setup.js'],
+    snapshotSerializers: ['jest-serializer-html'],
 };
