@@ -11,6 +11,10 @@
 
     backstopjs
 
+**Install**
+
+    yarn add -D backstopjs
+
 ---
 
 ### [Cypress](https://www.cypress.io)
@@ -35,6 +39,10 @@
     pa11y
     pa11y-reporter-html
 
+**Install**
+
+    yarn add -D pa11y pa11y-reporter-html
+
 ---
 
 ### [TestCafe](https://devexpress.github.io/testcafe/)
@@ -49,6 +57,10 @@
 
     testcafe
 
+**Install**
+
+    yarn add -D testcafe
+
 ---
 
 ### [Webhint](https://webhint.io)
@@ -62,3 +74,7 @@
 **Packages**
 
     hint
+
+**Install**
+
+    yarn add -D hint

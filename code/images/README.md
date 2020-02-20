@@ -9,3 +9,7 @@
 **Packages**
 
     imagemin
+
+**Install**
+
+    yarn add -D imagemin

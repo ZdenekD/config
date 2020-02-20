@@ -14,6 +14,10 @@
     jest
     jest-serializer-html
 
+**Install**
+
+    yarn add -D @babel/core @babel/preset-env babel-eslint babel-jest core-js@3 eslint eslint-config-airbnb-base eslint-plugin-import eslint-plugin-jest jest jest-serializer-html
+
 ---
 
 #### [Babel](https://babeljs.io)

@@ -15,6 +15,10 @@
     stylelint
     stylelint-config-recommended
 
+**Install**
+
+    yarn add -D cssnano css-mqpacker postcss-import postcss-nested postcss-normalize postcss-preset-env postcss-modules postcss-reporter stylelint stylelint-config-recommended
+
 **Config**
 
     /code/styles/.stylelintrc

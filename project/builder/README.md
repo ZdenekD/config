@@ -48,6 +48,12 @@
 
     /project/builder/webpack/no-css-extract/webpack.config.babel.js
 
+**Install**
+
+    yarn add -D webpack webpack-cli webpack-dev-server babel-loader css-loader eslint-loader file-loader postcss-loader style-loader @svgr/webpack copy-webpack-plugin html-replace-webpack-plugin html-webpack-plugin imagemin-webpack-plugin
+
+    yarn add -D @babel/register @hot-loader/react-dom
+
 ---
 
 #### With css file extract
@@ -55,6 +61,12 @@
 **Config**
 
     /project/builder/webpack/css-extract/webpack.config.babel.js
+
+**Install**
+
+    yarn add -D webpack webpack-cli webpack-dev-server babel-loader css-loader eslint-loader file-loader postcss-loader style-loader @svgr/webpack copy-webpack-plugin html-replace-webpack-plugin html-webpack-plugin imagemin-webpack-plugin
+
+    yarn add -D @babel/register @hot-loader/react-dom
 
 ---
 
@@ -64,6 +76,12 @@
 
     /project/builder/webpack/ico-generate/webpack.config.babel.js
     /project/builder/webpack/ico-generate/config.json
+
+**Install**
+
+    yarn add -D webpack webpack-cli webpack-dev-server babel-loader css-loader eslint-loader file-loader postcss-loader style-loader @svgr/webpack copy-webpack-plugin favicons-webpack-plugin html-replace-webpack-plugin html-webpack-plugin imagemin-webpack-plugin
+
+    yarn add -D @babel/register @hot-loader/react-dom
 
 ---
 

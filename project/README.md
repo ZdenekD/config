@@ -44,6 +44,10 @@ Environment settings
 
     /project/.env.sample
 
+**Install**
+
+    yarn add -D dotenv
+
 ---
 
 ### [.gitignore](https://git-scm.com/docs/gitignore)
@@ -75,20 +79,30 @@ Environment settings
 
     /project/package.json.sample
 
--   [Webhint](https://webhint.io)
-    -   install: `yarn add -D hint`
--   [Husky](https://github.com/typicode/husky)
-    -   run git commands from package (e.g. pre-commit)
-    -   install: `yarn add -D husky`
+---
+
+### [Husky](https://github.com/typicode/husky)
+
+-   run git commands from package (e.g. pre-commit)
 
 **Config**
 
     /project/.huskyrc.sample
 
--   [lint-staged](https://github.com/okonet/lint-staged)
-    -   run linters only on staged files before commit
-    -   install: `yarn add -D lint-staged`
+**Install**
+
+    yarn add -D husky
+
+---
+
+### [lint-staged](https://github.com/okonet/lint-staged)
+
+-   run linters only on staged files before commit
 
 **Config**
 
     /project/.lintstagedrc.sample
+
+**Install**
+
+    yarn add -D lint-staged
