@@ -20,6 +20,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
         removeRedundantAttributes: true,
         removeScriptTypeAttributes: true,
         removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true,
     },
     robots: isProduction ? 'index, follow' : 'noindex, nofollow',
 });

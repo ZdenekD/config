@@ -5,7 +5,6 @@
 **Packages**
 
     cssnano
-    css-mqpacker
     postcss-import
     postcss-nested
     postcss-normalize
@@ -14,10 +13,13 @@
     postcss-reporter
     stylelint
     stylelint-config-recommended
+    stylelint-order
+    stylelint-a11y
+    stylelint-csstree-validator
 
 **Install**
 
-    yarn add -D cssnano css-mqpacker postcss-import postcss-nested postcss-normalize postcss-preset-env postcss-modules postcss-reporter stylelint stylelint-config-recommended
+    yarn add -D cssnano postcss-import postcss-nested postcss-normalize postcss-preset-env postcss-modules postcss-reporter stylelint stylelint-config-recommended stylelint-order stylelint-a11y stylelint-csstree-validator
 
 **Config**
 
