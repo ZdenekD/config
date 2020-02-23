@@ -50,14 +50,6 @@
 
 ---
 
--   Setup file for using `jest` with [Enzyme](https://airbnb.io/enzyme/)
-
-**Setup**
-
-    /code/scripts/utils/enzyme.js
-
----
-
 -   Transform helpers
 
 **Helpers**
