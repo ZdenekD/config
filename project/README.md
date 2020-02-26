@@ -35,10 +35,12 @@ Environment settings
     WEBPACK_PORT=3010 - webpack port
     PARCEL_PORT=3011 - parcel port
     BROWSERSYNC_PORT=8000 - browsersync port
+    SENDGRID_API_KEY='sendgrid-api-key'
 
 -   [webpack](https://webpack.js.org)
 -   [parcel](https://parceljs.org)
 -   [browsersync](https://www.browsersync.io)
+-   [sendgrid](https://app.sendgrid.com)
 
 **Config**
 

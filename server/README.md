@@ -32,11 +32,19 @@
 
 ### [NextJS](https://nextjs.org)
 
+#### Basic settings
+
 -   nodejs react framework
 
 **Config**
 
-    /server/nodejs/nextjs/next.config.js
+    /server/nodejs/nextjs/basic/next.config.js
+
+#### [Sendgrid](https://zeit.co/guides/deploying-nextjs-nodejs-and-sendgrid-with-zeit-now) settings
+
+**Config**
+
+    /server/nodejs/nextjs/sendgrid/next.config.js
 
 ---
 
@@ -49,6 +57,15 @@
 **Config**
 
     /server/now/singlepage/now.json
+
+### Now with sendgrid e-mail sender
+
+-   added sendgrid api key value for zeit
+-   `now secrets add SENDGRID_API_KEY [your-sendgrid-api-key]`
+
+**Config**
+
+    /server/now/sendgrid/now.json
 
 #### Now ignore file
 
