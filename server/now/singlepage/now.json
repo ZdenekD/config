@@ -1,6 +1,5 @@
 {
   "name": "Project",
-  "regions": ["cdg1", "bru1"],
   "rewrites": [
     {
       "source": "/(.*)",
