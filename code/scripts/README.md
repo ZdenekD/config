@@ -8,6 +8,17 @@
     -   [@babel/plugin-proposal-private-methods](https://github.com/tc39/proposal-private-methods)
     -   [@babel/plugin-syntax-dynamic-import](https://babeljs.io/docs/en/next/babel-plugin-syntax-dynamic-import.html)
 
+**Install**
+
+    yarn add -D @babel/plugin-proposal-object-rest-spread
+    yarn add -D @babel/plugin-proposal-class-properties
+    yarn add -D @babel/plugin-proposal-optional-chaining
+    yarn add -D @babel/plugin-proposal-nullish-coalescing-operator
+    yarn add -D @babel/plugin-proposal-private-methods
+    yarn add -D @babel/plugin-syntax-dynamic-import
+
+---
+
 ### Vanilla javascript
 
 [documentation](./javascript/README.md)
@@ -41,6 +52,10 @@
 
     prettier
 
+**Install**
+
+    yarn add -D prettier
+
 ---
 
 ### [JSDOC](https://jsdoc.app/)
@@ -54,3 +69,7 @@
 **Packages**
 
     jsdoc
+
+**Install**
+
+    yarn add -D jsdoc
