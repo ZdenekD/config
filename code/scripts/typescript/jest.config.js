@@ -3,6 +3,7 @@ module.exports = {
     transform: {
         '^.+\\.ts(x)?$': 'ts-jest',
         '^.+\\.css$': '<rootDir>/__test__/transform/css.js',
+        '^.+\\.svg$': '<rootDir>/__test__/transform/svg.js',
         '^(?!.*\\.(js|jsx|css|json)$)': '<rootDir>/__test__/transform/file.js',
     },
     transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$', '^.+\\.module\\.(css|sass|scss)$'],
