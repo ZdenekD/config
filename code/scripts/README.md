@@ -27,6 +27,10 @@
 
 [documentation](./react/README.md)
 
+### Svelte
+
+[documentation](./svelte/README.md)
+
 ### Typescript
 
 [documentation](./typescript/README.md)
