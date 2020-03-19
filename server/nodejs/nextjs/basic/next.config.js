@@ -17,4 +17,5 @@ module.exports = styles({
 
         return config;
     },
+    poweredByHeader: false,
 });
