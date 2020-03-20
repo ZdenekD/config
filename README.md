@@ -1,31 +1,33 @@
 # README config
 
-Cross projects source configuration files.
+Cross projects configuration files.
 There's minimal configurations editable for the needs of specific projects.
 
 ---
-
-## JS
-
-[documentation](./code/scripts/README.md)
-
-## CSS
-
-[documentation](./code/styles/README.md)
-
-## IMAGES
-
-[documentation](./code/images/README.md)
 
 ## HTML
 
 [documentation](./code/html/README.md)
 
-## SERVER
+## Images
+
+[documentation](./code/images/README.md)
+
+## Scripts
+
+[documentation](./code/scripts/README.md)
+
+## Styles
+
+[documentation](./code/styles/README.md)
+
+---
+
+## Server
 
 [documentation](./server/README.md)
 
-## PROJECT
+## Project
 
 -   [Project guidelines](https://github.com/elsewhencode/project-guidelines)
 
@@ -40,6 +42,6 @@ There's minimal configurations editable for the needs of specific projects.
 -   ### Build
     -   [webpack](./project/build/README.md)
 
-## EDITOR
+## Editor
 
 [documentation](./IDE/README.md)

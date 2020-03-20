@@ -2,8 +2,10 @@
   "editor.folding": false,
   "editor.fontSize": 12,
   "editor.colorDecorators": false,
+  "editor.detectIndentation": true,
   "editor.formatOnSave": true,
   "editor.hideCursorInOverviewRuler": true,
+  "editor.insertSpaces": true,
   "editor.matchBrackets": "always",
   "editor.minimap.enabled": false,
   "editor.occurrencesHighlight": false,
@@ -28,6 +30,9 @@
   "workbench.colorTheme": "Material Theme High Contrast",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
+  "files.associations": {
+    "*.svelte": "html"
+  },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "breadcrumbs.enabled": true,
@@ -46,7 +51,7 @@
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "javascript.preferences.quoteStyle": "single",
-  "eslint.validate": ["html", "javascript", "javascriptreact"],
+  "eslint.validate": ["html", "javascript", "javascriptreact", "svelte"],
   "eslint.lintTask.enable": true,
   "eslint.run": "onSave",
   "eslint.packageManager": "yarn",
@@ -71,14 +76,19 @@
     "editor.formatOnSave": false
   },
   "markdown.extension.toc.githubCompatibility": true,
-  "webhint.enableTelemetry": "disabled",
-  "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[svelte]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   }
 }

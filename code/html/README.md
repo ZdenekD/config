@@ -2,6 +2,7 @@
 
 -   Visual regression testing comparing DOM screenshots
 -   Settings go through node script. It's needed to have `localhost.json` file with local url (where can we found html files to test)
+-   Sample of `localhost.json` file is in `/project/localhost.json.sample`
 
 **Node script**
 

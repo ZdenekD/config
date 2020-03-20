@@ -27,6 +27,16 @@ There's minimal configurations editable for the needs of specific projects.
 
 ---
 
+### localhost.json
+
+-   File for defining developers local url used for some tests etc.
+
+**Config**
+
+    /project/localhost.json.sample
+
+---
+
 ### [dotenv](https://www.npmjs.com/package/dotenv)
 
 Environment settings
@@ -35,6 +45,7 @@ Environment settings
     WEBPACK_PORT=3010 - webpack port
     PARCEL_PORT=3011 - parcel port
     BROWSERSYNC_PORT=8000 - browsersync port
+    CYPRESS_PORT=8010 - cypress port
     SENDGRID_API_KEY='sendgrid-api-key'
 
 -   [webpack](https://webpack.js.org)

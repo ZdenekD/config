@@ -18,12 +18,12 @@ fs.readdirSync('pages').forEach(file => {
     }
 });
 
-pages.forEach((page, i) => {
+pages.forEach(page => {
     const regex = new RegExp('.html', 'g');
 
     scenarios.push({
-        label: pages[i].label.replace(regex, ''),
-        url: `${url}/${pages[i].file}`,
+        label: page.label.replace(regex, ''),
+        url: `${url}/${page.file}`,
     });
 });
 
@@ -39,11 +39,11 @@ module.exports = {
     ],
     scenarios,
     paths: {
-        bitmaps_reference: 'test/regression/bitmaps_reference',
-        bitmaps_test: 'test/regression/bitmaps_test',
-        engine_scripts: 'test/regression/engine_scripts',
-        html_report: 'test/regression/html_report',
-        ci_report: 'test/regression/ci_report',
+        bitmaps_reference: '__test__/backstop/bitmaps_reference',
+        bitmaps_test: '__test__/backstop/bitmaps_test',
+        engine_scripts: '__test__/backstop/engine_scripts',
+        html_report: '__test__/backstop/html_report',
+        ci_report: '__test__/backstop/ci_report',
     },
     report: ['browser'],
     engine: 'puppeteer',
