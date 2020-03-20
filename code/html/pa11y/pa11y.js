@@ -4,7 +4,7 @@ const pa11y = require('html/pa11y/pa11y');
 const reporter = require('pa11y-reporter-html');
 const config = require('./config.json').pa11y;
 
-const test = path.resolve('test');
+const test = path.resolve('__test__');
 
 /**
  * Check directory existence and make directory if doesn't exists
