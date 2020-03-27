@@ -17,6 +17,9 @@
       "node": {
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
+    },
+    "react": {
+      "version": "detect"
     }
   },
   "overrides": [
@@ -101,6 +104,8 @@
         "allow": ["info", "log", "assert"]
       }
     ],
+    // This rule aims to reduce the scrolling required when reading through your code. It will warn when the maximum amount of empty lines has been exceeded.
+    "no-multiple-empty-lines": [2, {"max": 1, "maxEOF": 1, "maxBOF": 2}],
     // Disallow the unary operators ++ and --
     "no-plusplus": [
       "error",
@@ -185,6 +190,8 @@
         "properties": "never"
       }
     ],
+    // Enforce valid expect() usage (valid-expect)
+    "jest/valid-expect": 1,
     // Explicit accessibility modifiers on class properties and methods are not required
     "@typescript-eslint/explicit-member-accessibility": ["off"],
     // Off import errors (becauseof webpack config)
