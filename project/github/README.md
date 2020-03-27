@@ -5,6 +5,5 @@
 
 **Config**
 
-    /project/github/actions/audit.yml
     /project/github/actions/jest.yml
     /project/github/actions/snyk.yml
