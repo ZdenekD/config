@@ -152,6 +152,8 @@
         "asyncArrow": "always"
       }
     ],
+    // Enforce valid expect() usage (valid-expect)
+    "jest/valid-expect": 1,
     // Off import errors (becauseof webpack config)
     "import/no-extraneous-dependencies": 1,
     "import/no-unresolved": 1,

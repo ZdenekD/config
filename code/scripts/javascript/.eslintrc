@@ -78,6 +78,8 @@
         "allow": ["info", "log", "assert"]
       }
     ],
+    // This rule aims to reduce the scrolling required when reading through your code. It will warn when the maximum amount of empty lines has been exceeded.
+    "no-multiple-empty-lines": [2, {"max": 1, "maxEOF": 1, "maxBOF": 2}],
     // Disallow the unary operators ++ and --
     "no-plusplus": [
       "error",
@@ -144,6 +146,8 @@
         "asyncArrow": "always"
       }
     ],
+    // Enforce valid expect() usage (valid-expect)
+    "jest/valid-expect": 1,
     // Off import errors (becauseof webpack config)
     "import/no-extraneous-dependencies": 1,
     "import/no-unresolved": 1,

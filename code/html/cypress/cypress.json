@@ -1,9 +1,10 @@
 {
   "port": 8010,
+  "baseUrl": "http://localhost:3000",
   "pluginsFile": false,
   "supportFile": false,
   "integrationFolder": "__test__/cypress/integration",
   "fixturesFolder": "__test__/cypress/fixtures",
-  "screenshostsFolder": "__test__/cypress/screenshots",
+  "screenshotsFolder": "__test__/cypress/screenshots",
   "videosFolder": "__test__/cypress/videos"
 }
