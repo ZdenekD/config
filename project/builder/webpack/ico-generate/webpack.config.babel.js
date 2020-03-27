@@ -121,7 +121,6 @@ module.exports = () => ({
         port: process.env.WEBPACK_PORT || 3010,
         stats: 'errors-only',
         hot: true,
-        http2: true,
     },
     devtool: !isProduction ? 'cheap-module-eval-source-map' : '',
     context: __dirname,
