@@ -14,7 +14,7 @@ module.exports = {
     collectCoverage: true,
     collectCoverageFrom: ['src/**/*.{ts,tsx}', '!src/**/*.d.ts', '!src/index.{ts,tsx}'],
     coverageDirectory: './__test__/coverage',
-    coverageReporters: ['html'],
+    coverageReporters: ['html', 'test', 'lcov'],
     setupFiles: ['<rootDir>/__test__/utils/setup.js'],
     snapshotSerializers: ['jest-serializer-html'],
 };

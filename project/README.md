@@ -46,11 +46,14 @@ Environment settings
     PARCEL_PORT=3011 - parcel port
     BROWSERSYNC_PORT=8000 - browsersync port
     CYPRESS_PORT=8010 - cypress port
+    STORYBOOK_PORT=8020 - storybook port
     SENDGRID_API_KEY='sendgrid-api-key'
 
 -   [webpack](https://webpack.js.org)
 -   [parcel](https://parceljs.org)
 -   [browsersync](https://www.browsersync.io)
+-   [cypress](www.cypress.io)
+-   [storybook](https://storybook.js.org)
 -   [sendgrid](https://app.sendgrid.com)
 
 **Config**
