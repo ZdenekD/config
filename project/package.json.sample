@@ -6,20 +6,17 @@
   "keywords": [],
   "license": "MIT",
   "homepage": "git@github.com:ZdenekD/project-name.git#readme",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:ZdenekD/project-name.git"
-  },
+  "repository": "git@github.com:ZdenekD/project-name.git",
   "scripts": {
     "clean": "rm -rf ./dist/*",
     "reinstall": "rm -rf 'yarn.lock' 'node_modules' && yarn",
     "start": "NODE_ENV=development webpack-dev-server --mode development --color --compress --open",
     "build": "yarn clean && NODE_ENV=production webpack --mode production",
-    "test:js": "jest",
-    "test:js:watch": "jest --watch",
+    "test:js": "jest --watch",
     "test:js:coverage": "jest --coverage",
-    "test:cypress": "cypress open",
-    "test:webhint": "hint http://localhost:3000"
+    "test:cy": "cypress run",
+    "test:cy:open": "cypress open",
+    "test:hint": "hint http://localhost:3000"
   },
   "engines": {
     "node": ">=12.0.0",

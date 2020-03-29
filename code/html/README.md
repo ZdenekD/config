@@ -46,6 +46,25 @@
 
 ---
 
+### [Percy](https://percy.io)
+
+-   Visual tests
+-   It's good to use with `cypress` (but it's not only possibility)
+
+**Node script**
+
+    /code/html/percy/.percy.yml
+
+**Packages**
+
+    @percy/cypress
+
+**Install**
+
+    yarn add -D @percy/cypress
+
+---
+
 ### [TestCafe](https://devexpress.github.io/testcafe/)
 
 -   End-to-end web testing
