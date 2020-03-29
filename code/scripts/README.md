@@ -37,12 +37,6 @@
 
 ---
 
-### [Flow](https://flow.org/)
-
-// TODO
-
----
-
 ### [Prettier](https://prettier.io)
 
 -   Code formatter
