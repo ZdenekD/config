@@ -15,7 +15,6 @@
     Loaders
         babel-loader
         css-loader
-        eslint-loader
         file-loader
         postcss-loader
         style-loader
@@ -50,7 +49,7 @@
 
 **Install**
 
-    yarn add -D webpack webpack-cli webpack-dev-server babel-loader css-loader eslint-loader file-loader postcss-loader style-loader @svgr/webpack copy-webpack-plugin html-replace-webpack-plugin html-webpack-plugin imagemin-webpack-plugin
+    yarn add -D webpack webpack-cli webpack-dev-server babel-loader css-loader file-loader postcss-loader style-loader @svgr/webpack copy-webpack-plugin html-replace-webpack-plugin html-webpack-plugin imagemin-webpack-plugin
 
     yarn add -D @babel/register @hot-loader/react-dom
 
@@ -64,7 +63,7 @@
 
 **Install**
 
-    yarn add -D webpack webpack-cli webpack-dev-server babel-loader css-loader eslint-loader file-loader postcss-loader style-loader @svgr/webpack copy-webpack-plugin html-replace-webpack-plugin html-webpack-plugin imagemin-webpack-plugin
+    yarn add -D webpack webpack-cli webpack-dev-server babel-loader css-loader file-loader postcss-loader style-loader @svgr/webpack copy-webpack-plugin html-replace-webpack-plugin html-webpack-plugin imagemin-webpack-plugin
 
     yarn add -D @babel/register @hot-loader/react-dom
 
@@ -79,7 +78,7 @@
 
 **Install**
 
-    yarn add -D webpack webpack-cli webpack-dev-server babel-loader css-loader eslint-loader file-loader postcss-loader style-loader @svgr/webpack copy-webpack-plugin favicons-webpack-plugin html-replace-webpack-plugin html-webpack-plugin imagemin-webpack-plugin
+    yarn add -D webpack webpack-cli webpack-dev-server babel-loader css-loader file-loader postcss-loader style-loader @svgr/webpack copy-webpack-plugin favicons-webpack-plugin html-replace-webpack-plugin html-webpack-plugin imagemin-webpack-plugin
 
     yarn add -D @babel/register @hot-loader/react-dom
 

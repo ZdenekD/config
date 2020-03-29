@@ -1,7 +1,11 @@
-name: Jest
+name: Snyk
 on:
   push:
     branches:
+      - develop
+  pull_request:
+    branches:
+      - master
       - develop
 jobs:
   test:
@@ -11,5 +15,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - run: yarn
-      - run: npx jest
+      - uses: snyk/actions/node@master
+        env:
+          SNYK_TOKEN: ${{secrets.SNYK_TOKEN}}
