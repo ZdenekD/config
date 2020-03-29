@@ -115,9 +115,6 @@ module.exports = () => ({
                     {
                         loader: 'babel-loader?cacheDirectory',
                     },
-                    {
-                        loader: 'eslint-loader',
-                    },
                 ],
             },
             {
