@@ -4,7 +4,7 @@
 -   Settings go through node script. It's needed to have `localhost.json` file with local url (where can we found html files to test)
 -   Sample of `localhost.json` file is in `/project/localhost.json.sample`
 
-**Node script**
+**Config**
 
     /code/html/backstop/backstop.js
 
@@ -31,7 +31,7 @@
 -   Accessibility tests
 -   Settings go through node script. It's needed to have `config.json` file with settings
 
-**Node script**
+**Config**
 
     /code/html/pa11y/pa11y.js
 
@@ -51,7 +51,7 @@
 -   Visual tests
 -   It's good to use with `cypress` (but it's not only possibility)
 
-**Node script**
+**Config**
 
     /code/html/percy/.percy.yml
 
@@ -62,6 +62,26 @@
 **Install**
 
     yarn add -D @percy/cypress
+
+---
+
+### [Storybook](https://storybook.js.org)
+
+-   Build and document UI components
+
+### React
+
+-   In `main.js` is webpack styles rules overwritten by my own rule
+
+**Packages**
+
+    @storybook/react
+    @storybook/addon-storysource
+    @storybook/addon-viewport
+
+**Install**
+
+    yarn add -D @storybook/react @storybook/addon-storysource @storybook/addon-viewport
 
 ---
 
