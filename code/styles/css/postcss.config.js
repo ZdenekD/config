@@ -1,7 +1,7 @@
 module.exports = () => ({
     map: process.env.NODE_ENV === 'development',
     plugins: {
-        stylelint: {},
+        stylelint: process.env.NODE_ENV === 'development' ? {} : undefined,
         'postcss-import': {},
         'postcss-nested': {},
         'postcss-normalize': {},
