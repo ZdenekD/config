@@ -1,14 +1,11 @@
 name: Jest
 on:
-  push:
-    branches:
-      - develop
   pull_request:
     branches:
       - master
       - develop
 jobs:
-  test:
+  jest-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

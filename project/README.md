@@ -29,7 +29,7 @@ There's minimal configurations editable for the needs of specific projects.
 
 ### localhost.json
 
--   File for defining developers local url used for some tests etc.
+-   File for defining developers local url used for some tests (BackstopJS) etc.
 
 **Config**
 
