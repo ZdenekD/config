@@ -1,85 +1,113 @@
 import path from 'path';
+import chalk from 'chalk';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
+import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 import HtmlReplaceWebpackPlugin from 'html-replace-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ImageminPlugin from 'imagemin-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import ProgressPlugin from 'progress-bar-webpack-plugin';
 
 require('dotenv').config();
 
 const config = require('./config.json');
 
 const isProduction = process.env.NODE_ENV === 'production';
-const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-    template: path.resolve(__dirname, 'src/index.html'),
-    filename: 'index.html',
-    inject: 'body',
-    minify: {
-        collapseWhitespace: true,
-        preserveLineBreaks: true,
-        removeComments: true,
-        removeRedundantAttributes: true,
-        removeScriptTypeAttributes: true,
-        removeStyleLinkTypeAttributes: true,
-        useShortDoctype: true,
-    },
-    robots: isProduction ? 'index, follow' : 'noindex, nofollow',
-});
-const MiniCssExtractPluginConfig = new MiniCssExtractPlugin({
-    filename: '[name].[hash].css',
-    chunkFilename: '[id].[hash].css',
-});
-const CopyWebpackPluginConfig = new CopyWebpackPlugin([
-    {
-        from: config.public.images,
-        to: 'images',
-    },
-]);
-const HtmlReplaceWebpackPluginConfig = new HtmlReplaceWebpackPlugin([
-    {
-        pattern: config.public.images,
-        replacement: 'images/',
-    },
-]);
-const ImageminPluginConfig = new ImageminPlugin({
-    disable: !isProduction,
-    context: 'src',
-    destination: path.resolve(__dirname, config.output.dir),
-    gifsicle: {
-        optimizationLevel: 3,
-        interlaced: true,
-        colors: 10,
-    },
-    mozjpeg: {
-        progressive: true,
-        quality: 90,
-    },
-    pngquant: {
-        speed: 1,
-        quality: 90,
-    },
-    svgo: {
-        plugins: [
-            {
-                removeViewBox: false,
-            },
-            {
-                cleanupIDs: true,
-            },
-        ],
-    },
-    webp: {
-        quality: 90,
-    },
-});
-const plugins = [MiniCssExtractPluginConfig, HtmlWebpackPluginConfig, CopyWebpackPluginConfig, HtmlReplaceWebpackPluginConfig, ImageminPluginConfig];
+const {entry, output, styles, assets} = config;
+const plugins = [];
+
+// HTML webpack plugin
+plugins.push(
+    new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, 'src/index.html'),
+        filename: 'index.html',
+        inject: 'body',
+        minify: {
+            collapseWhitespace: true,
+            preserveLineBreaks: true,
+            removeComments: true,
+            removeRedundantAttributes: true,
+            removeScriptTypeAttributes: true,
+            removeStyleLinkTypeAttributes: true,
+            useShortDoctype: true,
+        },
+        robots: isProduction ? 'index, follow' : 'noindex, nofollow',
+    }),
+);
+
+// CSS extract plugin
+if (styles.extract) {
+    plugins.unshift(
+        new MiniCssExtractPlugin({
+            filename: '[name].[hash].css',
+            chunkFilename: '[id].[hash].css',
+        }),
+    );
+}
+
+// Copy and HTML replace webpack plugins
+if (assets) {
+    const copy = [];
+    const replace = [];
+
+    Object.keys(assets).forEach(key => {
+        copy.push({
+            from: assets[key],
+            to: key,
+        });
+
+        replace.push({
+            pattern: assets[key],
+            replacement: key,
+        });
+    });
+
+    copy.push({
+        from: './robots.txt',
+        to: '',
+    });
+
+    plugins.push(new CopyWebpackPlugin(copy), new HtmlReplaceWebpackPlugin(replace));
+}
+
+// Image minification plugin
+plugins.push(
+    new ImageminPlugin({
+        disable: !isProduction,
+        context: 'src',
+        destination: path.resolve(__dirname, output),
+        gifsicle: {
+            optimizationLevel: 3,
+            interlaced: true,
+            colors: 10,
+        },
+        mozjpeg: {
+            progressive: true,
+            quality: 90,
+        },
+        pngquant: {
+            speed: 1,
+            quality: 90,
+        },
+        svgo: {plugins: [{removeViewBox: false}, {cleanupIDs: true}]},
+        webp: {quality: 90},
+    }),
+);
+
+// Favicons plugin
+if (config.favicons) {
+    plugins.push(new FaviconsWebpackPlugin({...config.favicons}));
+}
+
+// Progress bar plugin
+plugins.push(new ProgressPlugin({format: `Building [:bar] ${chalk.green.bold(':percent')} (:elapsed seconds)`}));
 
 module.exports = () => ({
-    entry: config.entry,
+    entry,
     output: {
         filename: '[name].[hash].js',
         chunkFilename: '[name].[hash].js',
-        path: path.resolve(__dirname, config.output.dir),
+        path: path.resolve(__dirname, output),
         publicPath: '/',
     },
     plugins,
@@ -90,7 +118,7 @@ module.exports = () => ({
         },
     },
     devServer: {
-        contentBase: path.resolve(__dirname, config.output.dir),
+        contentBase: path.resolve(__dirname, output),
         historyApiFallback: true,
         noInfo: true,
         port: process.env.WEBPACK_PORT || 3010,
@@ -116,12 +144,16 @@ module.exports = () => ({
                 include: path.resolve(__dirname, 'src'),
                 exclude: /node_modules|vendor/,
                 use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            hmr: !isProduction,
-                        },
-                    },
+                    styles.extract
+                        ? {
+                              loader: MiniCssExtractPlugin.loader,
+                              options: {
+                                  hmr: !isProduction,
+                              },
+                          }
+                        : {
+                              loader: 'style-loader',
+                          },
                     {
                         loader: 'css-loader',
                         options: {

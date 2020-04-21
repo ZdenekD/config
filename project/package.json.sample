@@ -1,22 +1,24 @@
 {
-  "author": "zdenekd",
+  "author": "developer",
   "name": "project-name",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
   "license": "MIT",
-  "homepage": "git@github.com:ZdenekD/project-name.git#readme",
-  "repository": "git@github.com:ZdenekD/project-name.git",
+  "homepage": "git@github.com:Developer/project-name.git#readme",
+  "repository": "git@github.com:Developer/project-name.git",
   "scripts": {
     "clean": "rm -rf ./dist/*",
     "reinstall": "rm -rf 'yarn.lock' 'node_modules' && yarn",
     "start": "NODE_ENV=development webpack-dev-server --mode development --color --compress --open",
     "build": "yarn clean && NODE_ENV=production webpack --mode production",
-    "test:js": "jest --watch",
-    "test:js:coverage": "jest --coverage",
-    "test:cy": "cypress run",
-    "test:cy:open": "cypress open",
-    "test:hint": "hint http://project-development-url"
+    "jest": "jest --watch",
+    "jest:coverage": "jest --coverage",
+    "cypress": "cypress run",
+    "cypress:open": "cypress open",
+    "hint:local": "hint http://localhost:3000",
+    "hint:dev": "hint https://project-development.url",
+    "hint:prod": "hint https://project-production.url"
   },
   "engines": {
     "node": ">=12.0.0",

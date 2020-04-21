@@ -34,11 +34,11 @@
 
 [ ] **Sentry.io:** ![High][high] Project is created in sentry to get future errors
 
--   [sentry.io](https://sentry.io/organizations/zdenekd/projects/)
+-   [sentry.io](https://sentry.io/organizations/developer/projects/)
 
 [ ] **Snyk.io** ![Medium][medium] Project is added to Snyk to catch some vulnerabilities
 
--   [snyk.io](https://app.snyk.io/org/zdenekd)
+-   [snyk.io](https://app.snyk.io/org/developer)
 
 [ ] **Freshping** ![Medium][medium] Project is added to Freshping to catch some network problems
 
