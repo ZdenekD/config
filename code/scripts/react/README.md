@@ -20,11 +20,15 @@
     jest
     jest-enzyme
     jest-serializer-html
-    babel-plugin-react-remove-propertie
+    babel-plugin-react-remove-properties
 
 **Install**
 
-    yarn add -D @babel/core @babel/preset-env @babel/preset-react babel-eslint babel-jest core-js@3 enzyme enzyme-adapter-react-16 eslint eslint-config-airbnb-base eslint-plugin-import eslint-plugin-jest eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks jest jest-enzyme jest-serializer-html babel-plugin-react-remove-propertie
+    yarn add -D @babel/core @babel/preset-env @babel/preset-react babel-eslint babel-jest core-js@3 enzyme enzyme-adapter-react-16 eslint eslint-config-airbnb-base eslint-plugin-import eslint-plugin-jest eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks jest jest-enzyme jest-serializer-html babel-plugin-react-remove-properties
+
+**Useful**
+
+    yarn add -D @loadable/babel-plugin
 
 ---
 

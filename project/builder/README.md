@@ -19,6 +19,7 @@
         postcss-loader
         style-loader
         @svgr/webpack
+        svelte-loader
 
     Plugins
         copy-webpack-plugin
@@ -26,11 +27,13 @@
         html-webpack-plugin
         imagemin-webpack-plugin
         mini-css-extract-plugin
+        progress-bar-webpack-plugin
 
     Others
         @babel/register
         @hot-loader/react-dom
         dotenv
+        svelte-preprocess
 
 **Tasks**
 
@@ -43,49 +46,65 @@
 
 -   Webpack config file without extracting css file (it's used e.g. if we send some component with styles to 3rd party customer)
 
-**Config**
+**Config.json**
 
-    /project/builder/webpack/no-css-extract/webpack.config.babel.js
-
-**Install**
-
-    yarn add -D webpack webpack-cli webpack-dev-server babel-loader css-loader file-loader postcss-loader style-loader @svgr/webpack copy-webpack-plugin html-replace-webpack-plugin html-webpack-plugin imagemin-webpack-plugin
-
-    yarn add -D @babel/register @hot-loader/react-dom
+```
+"styles": {
+    "extract": false
+}
+```
 
 ---
 
 #### With css file extract
 
-**Config**
+**Config.json**
 
-    /project/builder/webpack/css-extract/webpack.config.babel.js
-
-**Install**
-
-    yarn add -D webpack webpack-cli webpack-dev-server babel-loader css-loader file-loader postcss-loader style-loader @svgr/webpack copy-webpack-plugin html-replace-webpack-plugin html-webpack-plugin imagemin-webpack-plugin
-
-    yarn add -D @babel/register @hot-loader/react-dom
+```
+"styles": {
+    "extract": true
+}
+```
 
 ---
 
 #### With favicons generator
 
-**Config**
+**Config.json**
 
-    /project/builder/webpack/ico-generate/webpack.config.babel.js
-    /project/builder/webpack/ico-generate/config.json
-
-**Install**
-
-    yarn add -D webpack webpack-cli webpack-dev-server babel-loader css-loader file-loader postcss-loader style-loader @svgr/webpack copy-webpack-plugin favicons-webpack-plugin html-replace-webpack-plugin html-webpack-plugin imagemin-webpack-plugin
-
-    yarn add -D @babel/register @hot-loader/react-dom
+```
+"favicons": {
+    "cache": true,
+    "logo": "./favicon.png",
+    "prefix": "[hash:base64:8]",
+    "favicons": {
+        "appName": "App Name",
+        "appDescription": "App Description",
+        "developerName": "Developer",
+        "developerURL": "https://develop.er",
+        "background": "#fff",
+        "icons": {
+            "android": true,
+            "appleIcon": true,
+            "appleStartup": true,
+            "coast": true,
+            "favicons": true,
+            "firefox": true,
+            "windows": true,
+            "yandex": true
+        }
+    }
+}
+```
 
 ---
 
-#### With js dynamic loadable scripts
+#### With Svelte
 
 **Config**
 
-    /project/builder/webpack/js-loadable/webpack.config.babel.js
+    /project/builder/webpack/svelte/webpack.config.babel.js
+
+**Install**
+
+    yarn add -D webpack webpack-cli webpack-dev-server chalk babel-loader css-loader file-loader postcss-loader style-loader svelte-loader svelte-preprocess @svgr/webpack copy-webpack-plugin favicons-webpack-plugin html-replace-webpack-plugin html-webpack-plugin imagemin-webpack-plugin mini-css-extract-plugin progress-bar-webpack-plugin
