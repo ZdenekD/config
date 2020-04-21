@@ -1,12 +1,12 @@
 {
-  "author": "zdenekd",
+  "author": "developer",
   "name": "project-name",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
   "license": "MIT",
-  "homepage": "git@github.com:ZdenekD/project-name.git#readme",
-  "repository": "git@github.com:ZdenekD/project-name.git",
+  "homepage": "git@github.com:Developer/project-name.git#readme",
+  "repository": "git@github.com:Developer/project-name.git",
   "scripts": {
     "clean": "rm -rf ./dist/*",
     "reinstall": "rm -rf 'yarn.lock' 'node_modules' && yarn",
