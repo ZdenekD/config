@@ -4,7 +4,7 @@ module.exports = {
         '^.+\\.ts(x)?$': 'ts-jest',
         '^.+\\.css$': '<rootDir>/__test__/transform/css.js',
         '^.+\\.svg$': '<rootDir>/__test__/transform/svg.js',
-        '^(?!.*\\.(js|jsx|css|json)$)': '<rootDir>/__test__/transform/file.js',
+        '^(?!.*\\.json$)': '<rootDir>/__test__/transform/file.js',
     },
     transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$', '^.+\\.module\\.(css|sass|scss)$'],
     roots: ['<rootDir>/src'],
@@ -14,7 +14,7 @@ module.exports = {
     collectCoverage: true,
     collectCoverageFrom: ['src/**/*.{ts,tsx}', '!src/**/*.d.ts', '!src/index.{ts,tsx}'],
     coverageDirectory: './__test__/coverage',
-    coverageReporters: ['html', 'test', 'lcov'],
-    setupFiles: ['<rootDir>/__test__/utils/setup.js'],
+    coverageReporters: ['html', 'lcov'],
+    setupFiles: ['<rootDir>/src/__test__/utils/setup.js'],
     snapshotSerializers: ['jest-serializer-html'],
 };
