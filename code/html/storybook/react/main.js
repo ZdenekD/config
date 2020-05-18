@@ -2,7 +2,11 @@ const path = require('path');
 
 module.exports = {
     stories: ['../src/**/*.stories.js'],
-    addons: ['@storybook/addon-storysource', '@storybook/addon-viewport/register'],
+    addons: [
+        '@storybook/addon-storysource',
+        '@storybook/addon-viewport/register',
+        '@storybook/addon-docs',
+    ],
     webpackFinal: async (config, {configType}) => {
         const isProduction = configType === 'production';
         const index = config.module.rules.findIndex(item => item.test.toString() === /\.css$/.toString());
@@ -11,9 +15,7 @@ module.exports = {
         config.module.rules.push({
             test: /\.css$/,
             use: [
-                {
-                    loader: 'style-loader',
-                },
+                {loader: 'style-loader'},
                 {
                     loader: 'css-loader',
                     options: {
@@ -27,9 +29,7 @@ module.exports = {
                 },
                 {
                     loader: 'postcss-loader',
-                    options: {
-                        sourceMap: 'inline',
-                    },
+                    options: {sourceMap: 'inline'},
                 },
             ],
         });

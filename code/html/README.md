@@ -86,10 +86,11 @@
     @storybook/react
     @storybook/addon-storysource
     @storybook/addon-viewport
+    @storybook/addon-docs
 
 **Install**
 
-    yarn add -D @storybook/react @storybook/addon-storysource @storybook/addon-viewport
+    yarn add -D @storybook/react @storybook/addon-storysource @storybook/addon-viewport @storybook/addon-docs
 
 ---
 
