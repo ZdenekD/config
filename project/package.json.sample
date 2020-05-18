@@ -14,6 +14,8 @@
     "build": "yarn clean && NODE_ENV=production webpack --mode production",
     "jest": "jest --watch",
     "jest:coverage": "jest --coverage",
+    "story": "start-storybook -s ./public -p 8020",
+    "story:build": "build-storybook -c .storybook -o .storybook/build",
     "cypress": "cypress run",
     "cypress:open": "cypress open",
     "hint:local": "hint http://localhost:3000",
