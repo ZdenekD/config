@@ -1,6 +1,8 @@
 {
-  "port": 8010,
   "baseUrl": "http://localhost:3000",
+  "port": 8010,
+  "viewportWidth": 1280,
+  "viewportHeight": 800,
   "pluginsFile": "__test__/cypress/plugins/index.js",
   "supportFile": "__test__/cypress/support/index.js",
   "integrationFolder": "__test__/cypress/integration",

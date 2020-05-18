@@ -48,6 +48,7 @@ Environment settings
     CYPRESS_PORT=8010 - cypress port
     STORYBOOK_PORT=8020 - storybook port
     SENDGRID_API_KEY='sendgrid-api-key'
+    CHROMATIC_PROJECT_TOKEN='chromatic-project-token'
 
 -   [webpack](https://webpack.js.org)
 -   [parcel](https://parceljs.org)
@@ -55,6 +56,7 @@ Environment settings
 -   [cypress](www.cypress.io)
 -   [storybook](https://storybook.js.org)
 -   [sendgrid](https://app.sendgrid.com)
+-   [chromatic](https://www.chromatic.com)
 
 **Config**
 

@@ -26,6 +26,14 @@
 
     /code/html/cypress/cypress.json
 
+**Package**
+
+    cypress
+
+**Install**
+
+    yarn add -D cypress
+
 ### [Pa11y](https://pa11y.org/)
 
 -   Accessibility tests
