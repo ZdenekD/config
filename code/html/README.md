@@ -34,26 +34,6 @@
 
     yarn add -D cypress
 
-### [Pa11y](https://pa11y.org/)
-
--   Accessibility tests
--   Settings go through node script. It's needed to have `config.json` file with settings
-
-**Config**
-
-    /code/html/pa11y/pa11y.js
-
-**Packages**
-
-    pa11y
-    pa11y-reporter-html
-
-**Install**
-
-    yarn add -D pa11y pa11y-reporter-html
-
----
-
 ### [Percy](https://percy.io)
 
 -   Visual tests
