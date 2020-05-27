@@ -60,7 +60,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
 ```
 
-[ ] **Title:** ![High][high] A title is used on all pages (SEO: Google calculates the pixel width of the characters used in the title, and it cuts off between 472 and 482 pixels. The average character limit would be around 55-characters).
+[ ] **Title:** ![High][high] A title is used on all pages (SEO: Google calculates the pixel width of the characters used in the title, and it cuts off between 472 and 482 pixels. The average character limit would be around 55-characters. The first word in the title has more “power” than the last one).
 
 ```html
 <title>Title</title>
