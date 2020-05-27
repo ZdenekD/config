@@ -1,6 +1,5 @@
 import {addDecorator, addParameters} from '@storybook/react';
 import React from 'react';
-import '../src/index.css';
 
 const viewports = {
     320: {
