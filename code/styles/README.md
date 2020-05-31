@@ -30,15 +30,13 @@
 
 ### &#128396; [Postcss](https://postcss.org/)
 
-#### css
+#### CSS
 
 **Config**
 
     /code/styles/css/postcss.config.js
 
----
-
-#### css modules
+#### CSS modules
 
 **Config**
 

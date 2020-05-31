@@ -4,8 +4,6 @@
 
     /server/apache/.htaccess
 
----
-
 ### Apache for singlepage
 
 -   root target to /dist (folder with built assets)

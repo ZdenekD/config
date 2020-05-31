@@ -48,8 +48,6 @@
 
     /code/scripts/javascript/jest/jest.config.js
 
----
-
 -   Transform helpers
 
 **Helpers**

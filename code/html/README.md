@@ -34,6 +34,8 @@
 
     yarn add -D cypress
 
+---
+
 ### &#128466; [Percy](https://percy.io)
 
 -   Visual tests
