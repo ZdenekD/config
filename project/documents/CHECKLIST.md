@@ -11,6 +11,8 @@
 ## Content
 
 -   [CHECKLIST](#checklist)
+    -   [Priorities](#priorities)
+    -   [Content](#content)
     -   [Project](#project)
     -   [Head](#head)
     -   [HTML](#html)
@@ -104,7 +106,7 @@
 [ ] **Canonical:** ![Medium][medium] Use `rel="canonical"` to avoid duplicate content.
 
 ```html
-<link rel="canonical" href="http://example.com/2017/09/a-new-article-to-read.html" />
+<link rel="canonical" href="https://example.com/2017/09/a-new-article-to-read.html" />
 ```
 
 [ ] **Apple Web App Meta:** ![Low][low] Apple meta-tags are present.
@@ -137,7 +139,7 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 
 [ ] **Facebook Open Graph:** ![Low][low] All Facebook Open Graph (OG) are tested and no one is missing or with a false information. Images need to be at least 600 x 315 pixels, although 1200 x 630 pixels is recommended.
 
--   [OpenGraph](http://ogp.me/)
+-   [OpenGraph](https://ogp.me/)
 
 ```html
 <meta property="og:type" content="website" />
@@ -244,7 +246,7 @@ yarn outdated
 [ ] **Javascript profiling:** ![Medium][medium] Check for performance problems in your Javascript files.
 
 -   [JS execution](https://developers.google.com/web/tools/chrome-devtools/rendering-tools/js-execution)
--   [JS performance tips](http://www.monitis.com/blog/30-tips-to-improve-javascript-performance/)
+-   [JS performance tips](https://www.monitis.com/blog/30-tips-to-improve-javascript-performance/)
 
 [ ] **Check dependencies size limit:** ![Low][low] Ensure to use wisely external libraries, most of the time, you can use a lighter library for a same functionality.
 
@@ -390,7 +392,7 @@ yarn outdated
 
 [ ] **Accessibility standards testing:** ![High][high] Use the WAVE tool to test if your page respects the accessibility standards.
 
--   [Wave](http://wave.webaim.org/)
+-   [Wave](https://wave.webaim.org/)
 
 [ ] **Keyboard navigation:** ![Medium][medium] Test your website using only your keyboard in a previsible order. All interactive elements are reachable and usable.
 
@@ -421,7 +423,7 @@ yarn outdated
 -   [JSON-LD](https://json-ld.org/)
 -   [Microdata](https://www.w3.org/TR/microdata/)
 -   Test your page with the [Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/)
--   Complete list of vocabularies that can be used as structured data. [Schema.org Full Hierarchy](http://schema.org/docs/full.html)
+-   Complete list of vocabularies that can be used as structured data. [Schema.org Full Hierarchy](https://schema.org/docs/full.html)
 
 [ ] **Headings logic:** ![Medium][medium] Heading text helps to understand the content in the current page.
 

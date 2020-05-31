@@ -1,4 +1,4 @@
-### [Apache](https://httpd.apache.org)
+### &#128452; [Apache](https://httpd.apache.org)
 
 **Config**
 
@@ -16,7 +16,7 @@
 
 ---
 
-### [AWS](https://aws.amazon.com)
+### &#128452; [AWS](https://aws.amazon.com)
 
 ### AWS CodeBuild for React
 
@@ -28,7 +28,7 @@
 
 ---
 
-### [NodeJS](https://nodejs.org/en/)
+### &#128452; [NodeJS](https://nodejs.org/en/)
 
 ### [NextJS](https://nextjs.org)
 
@@ -50,7 +50,7 @@
 
 ### [Now/Vercel](https://zeit.co/dashboard)
 
-### Now/Vercel for singlepage
+### &#128452; Now/Vercel for singlepage
 
 -   config file for single-page routes (everything goes through index.html)
 
