@@ -17,8 +17,6 @@
     yarn add -D @babel/plugin-proposal-private-methods
     yarn add -D @babel/plugin-syntax-dynamic-import
 
----
-
 -   ### [Vanilla javascript](./javascript/README.md)
 
 -   ### [React](./react/README.md)
