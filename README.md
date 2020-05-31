@@ -5,55 +5,44 @@ There's minimal configurations editable for the needs of specific projects.
 
 ---
 
-## HTML
+## &#128466; [HTML](./code/html/README.md)
 
-Config files used for test and document pages and HTML files
+-   Config files used for test and document pages and HTML files
 
-[documentation](./code/html/README.md)
+## &#128444; [Images](./code/images/README.md)
 
-## Images
+-   Config files used for work with images
 
-Config files used for work with images
+## &#128640; [Scripts](./code/scripts/README.md)
 
-[documentation](./code/images/README.md)
+-   Config files for work with javascript and frameworks
 
-## Scripts
+## &#128396; [Styles](./code/styles/README.md)
 
-Config files for work with javascript and libraries
-
-[documentation](./code/scripts/README.md)
-
-## Styles
-
-Config files for styles
-
-[documentation](./code/styles/README.md)
+-   Config files for styles
 
 ---
 
-## Server
+## &#128452; [Server](./server/README.md)
 
-Some useful config files for server side settings
+-   Some useful config files for server side settings
 
-[documentation](./server/README.md)
+## &#128025; Project
 
-## Project
+-   Documents used for project development
 
-Documents used for project development
+    -   ### [Cross-project configs](./project/README.md)
 
--   [Project guidelines](https://github.com/elsewhencode/project-guidelines)
+    -   ### [Documents](./project/documents/README.md)
 
--   ### Cross-project configs
+    -   ### [Build](./project/build/README.md)
 
-    -   [files](./project/README.md)
+## &#128221; [Editor / IDE](./IDE/README.md)
 
--   ### Documents
+-   Some base settings for code editors
 
-    -   [documents](./project/documents/README.md)
+## &#127959; [Workflow](https://app.creately.com/diagram/hxmQB22aeoW/view)
 
--   ### Build
-    -   [webpack](./project/build/README.md)
+-   Technologies and services used on projects
 
-## Editor
-
-[documentation](./IDE/README.md)
+![image](https://d1q8h8uqlxv0t0.cloudfront.net/workflow.png)

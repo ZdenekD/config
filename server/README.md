@@ -1,4 +1,4 @@
-### [Apache](https://httpd.apache.org)
+### &#128452; [Apache](https://httpd.apache.org)
 
 **Config**
 
@@ -16,7 +16,7 @@
 
 ---
 
-### [AWS](https://aws.amazon.com)
+### &#128452; [AWS](https://aws.amazon.com)
 
 ### AWS CodeBuild for React
 
@@ -28,7 +28,7 @@
 
 ---
 
-### [NodeJS](https://nodejs.org/en/)
+### &#128452; [NodeJS](https://nodejs.org/en/)
 
 ### [NextJS](https://nextjs.org)
 
@@ -48,17 +48,18 @@
 
 ---
 
-### [Now](https://zeit.co/dashboard)
+### [Now/Vercel](https://zeit.co/dashboard)
 
-### Now for singlepage
+### &#128452; Now/Vercel for singlepage
 
 -   config file for single-page routes (everything goes through index.html)
 
 **Config**
 
     /server/now/singlepage/now.json
+    /server/vercel/singlepage/vercel.json
 
-### Now with sendgrid e-mail sender
+### Now/Vercel with sendgrid e-mail sender
 
 -   added sendgrid api key value for zeit
 -   `now secrets add SENDGRID_API_KEY [your-sendgrid-api-key]`
@@ -66,11 +67,13 @@
 **Config**
 
     /server/now/sendgrid/now.json
+    /server/vercel/sendgrid/vercel.json
 
-#### Now ignore file
+#### Now/Vercel ignore file
 
 -   Ignore files not necessary for building on zeit.co
 
 **Config**
 
     /server/now/.nowignore
+    /server/vercel/.vercelignore

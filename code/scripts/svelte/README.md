@@ -1,4 +1,4 @@
-### [Svelte](https://svelte.dev)
+### &#128640; [Svelte](https://svelte.dev)
 
 **Packages**
 
@@ -16,7 +16,7 @@
 
 ---
 
-#### [Eslint](https://eslint.org/)
+#### &#128640; [Eslint](https://eslint.org/)
 
 **Config**
 

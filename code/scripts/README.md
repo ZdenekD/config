@@ -1,4 +1,4 @@
-#### [Babel](https://babeljs.io)
+#### &#128640; [Babel](https://babeljs.io)
 
 -   Some recommended/interesting packages
     -   [@babel/plugin-proposal-object-rest-spread](https://github.com/tc39/proposal-object-rest-spread)
@@ -19,25 +19,17 @@
 
 ---
 
-### Vanilla javascript
+-   ### [Vanilla javascript](./javascript/README.md)
 
-[documentation](./javascript/README.md)
+-   ### [React](./react/README.md)
 
-### React
+-   ### [Svelte](./svelte/README.md)
 
-[documentation](./react/README.md)
-
-### Svelte
-
-[documentation](./svelte/README.md)
-
-### Typescript
-
-[documentation](./typescript/README.md)
+-   ### [Typescript](./typescript/README.md)
 
 ---
 
-### [Prettier](https://prettier.io)
+### &#128640; [Prettier](https://prettier.io)
 
 -   Code formatter
 
@@ -56,7 +48,7 @@
 
 ---
 
-### [JSDOC](https://jsdoc.app/)
+### &#128640; [JSDOC](https://jsdoc.app/)
 
 -   JS documentation generator
 

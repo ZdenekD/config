@@ -1,4 +1,4 @@
-### [React](https://reactjs.org/)
+### &#128640; [React](https://reactjs.org/)
 
 **Packages**
 
@@ -32,7 +32,7 @@
 
 ---
 
-#### [Babel](https://babeljs.io)
+#### &#128640; [Babel](https://babeljs.io)
 
 -   Config for version 7+ with 'env' preset
 
@@ -42,7 +42,7 @@
 
 ---
 
-#### [Eslint](https://babeljs.io)
+#### &#128640; [Eslint](https://babeljs.io)
 
 -   Config file with added some rules for JSX / React
 
@@ -53,7 +53,7 @@
 
 ---
 
-#### [Jest](https://jestjs.io/)
+#### &#128640; [Jest](https://jestjs.io/)
 
 -   Base config for using Jest testing framework
 -   [Eslint plugin for Jest](https://github.com/jest-community/eslint-plugin-jest)
