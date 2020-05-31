@@ -1,4 +1,4 @@
-### Vanilla javascript
+### &#128640; Vanilla javascript
 
 **Packages**
 
@@ -20,7 +20,7 @@
 
 ---
 
-#### [Babel](https://babeljs.io)
+#### &#128640; [Babel](https://babeljs.io)
 
 -   Config for version 7+ with 'env' preset
 
@@ -30,7 +30,7 @@
 
 ---
 
-#### [Eslint](https://eslint.org/)
+#### &#128640; [Eslint](https://eslint.org/)
 
 **Config**
 
@@ -39,7 +39,7 @@
 
 ---
 
-#### [Jest](https://jestjs.io/)
+#### &#128640; [Jest](https://jestjs.io/)
 
 -   Base config for using Jest testing framework
 -   [Eslint plugin for Jest](https://github.com/jest-community/eslint-plugin-jest)

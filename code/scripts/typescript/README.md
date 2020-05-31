@@ -1,4 +1,4 @@
-### [Typescript](https://www.typescriptlang.org/)
+### &#128640; [Typescript](https://www.typescriptlang.org/)
 
 **Packages**
 
@@ -21,7 +21,7 @@
 
 ---
 
-#### [Eslint](https://eslint.org/)
+#### &#128640; [Eslint](https://eslint.org/)
 
 **Config**
 
@@ -30,7 +30,7 @@
 
 ---
 
-#### [Jest](https://jestjs.io/)
+#### &#128640; [Jest](https://jestjs.io/)
 
 -   Base config for using Jest testing framework
 -   [Eslint plugin for Jest](https://github.com/jest-community/eslint-plugin-jest)

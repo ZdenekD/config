@@ -1,4 +1,4 @@
-### [BackstopJS](https://github.com/garris/BackstopJS)
+### &#128466; [BackstopJS](https://github.com/garris/BackstopJS)
 
 -   Visual regression testing comparing DOM screenshots
 -   Settings go through node script. It's needed to have `localhost.json` file with local url (where can we found html files to test)
@@ -18,7 +18,7 @@
 
 ---
 
-### [Cypress](https://www.cypress.io)
+### &#128466; [Cypress](https://www.cypress.io)
 
 -   End-to-end web testing
 
@@ -34,7 +34,7 @@
 
     yarn add -D cypress
 
-### [Percy](https://percy.io)
+### &#128466; [Percy](https://percy.io)
 
 -   Visual tests
 -   It's good to use with `cypress` (but it's not only possibility)
@@ -53,7 +53,7 @@
 
 ---
 
-### [Storybook](https://storybook.js.org)
+### &#128466; [Storybook](https://storybook.js.org)
 
 -   Build and document UI components
 
@@ -74,7 +74,7 @@
 
 ---
 
-### [TestCafe](https://devexpress.github.io/testcafe/)
+### &#128466; [TestCafe](https://devexpress.github.io/testcafe/)
 
 -   End-to-end web testing
 
@@ -92,7 +92,7 @@
 
 ---
 
-### [Webhint](https://webhint.io)
+### &#128466; [Webhint](https://webhint.io)
 
 -   Complex site tests
 

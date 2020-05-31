@@ -1,4 +1,4 @@
-### [Stylelint](https://stylelint.io/)
+### &#128396; [Stylelint](https://stylelint.io/)
 
 -   Base config for cross company use
 
@@ -28,7 +28,7 @@
 
 ---
 
-### [Postcss](https://postcss.org/)
+### &#128396; [Postcss](https://postcss.org/)
 
 #### css
 
@@ -46,7 +46,7 @@
 
 ---
 
-### [Cssnano](https://cssnano.co)
+### &#128396; [Cssnano](https://cssnano.co)
 
 -   CSS minification config
 

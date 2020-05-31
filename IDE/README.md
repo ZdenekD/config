@@ -1,4 +1,4 @@
-### [VSCode](https://code.visualstudio.com)
+### &#128221; [VSCode](https://code.visualstudio.com)
 
 **Config**
 

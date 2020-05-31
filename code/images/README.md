@@ -1,4 +1,4 @@
-### [Imagemin](https://github.com/imagemin/imagemin)
+### &#128444; [Imagemin](https://github.com/imagemin/imagemin)
 
 -   Image optimization config
 
