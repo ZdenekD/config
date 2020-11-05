@@ -9,11 +9,10 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ProgressPlugin from 'progress-bar-webpack-plugin';
 import preprocessor from 'svelte-preprocess';
 
-require('dotenv').config();
-
+const env = require('dotenv').config().parsed;
 const config = require('./config.json');
 
-const isProduction = process.env.NODE_ENV === 'production';
+const isProduction = env.NODE_ENV === 'production';
 const {entry, output, styles, assets} = config;
 const plugins = [];
 
@@ -33,7 +32,12 @@ plugins.push(
             useShortDoctype: true,
         },
         robots: isProduction ? 'index, follow' : 'noindex, nofollow',
-    }),
+    })
+);
+
+// Environment variables
+plugins.push(
+    new DefinePlugin({env})
 );
 
 // CSS extract plugin
@@ -42,17 +46,17 @@ if (styles.extract) {
         new MiniCssExtractPlugin({
             filename: '[name].[hash].css',
             chunkFilename: '[id].[hash].css',
-        }),
+        })
     );
 }
 
 // Copy and HTML replace webpack plugins
 if (assets) {
-    const copy = [];
+    const copy = {patterns: []};
     const replace = [];
 
     Object.keys(assets).forEach(key => {
-        copy.push({
+        copy.patterns.push({
             from: assets[key],
             to: key,
         });
@@ -63,7 +67,7 @@ if (assets) {
         });
     });
 
-    copy.push({
+    copy.patterns.push({
         from: './robots.txt',
         to: '',
     });
@@ -92,7 +96,7 @@ plugins.push(
         },
         svgo: {plugins: [{removeViewBox: false}, {cleanupIDs: true}]},
         webp: {quality: 90},
-    }),
+    })
 );
 
 // Favicons plugin
@@ -113,17 +117,24 @@ module.exports = () => ({
     },
     plugins,
     resolve: {
-        extensions: ['.js', '.mjs', '.svelte'],
-        alias: {
-            svelte: path.resolve('node_modules', 'svelte'),
-        },
-        mainFields: ['svelte', 'browser', 'module', 'main'],
+        extensions: [
+            '.js',
+            '.mjs',
+            '.svelte',
+        ],
+        alias: {svelte: path.resolve('node_modules', 'svelte')},
+        mainFields: [
+            'svelte',
+            'browser',
+            'module',
+            'main',
+        ],
     },
     devServer: {
         contentBase: path.resolve(__dirname, output),
         historyApiFallback: true,
         noInfo: true,
-        port: process.env.WEBPACK_PORT || 3010,
+        port: env.WEBPACK_PORT || 3010,
         stats: 'errors-only',
         hot: true,
     },
@@ -145,8 +156,7 @@ module.exports = () => ({
                                 babel: {
                                     presets: [
                                         [
-                                            '@babel/preset-env',
-                                            {
+                                            '@babel/preset-env', {
                                                 useBuiltIns: 'usage',
                                                 corejs: 3,
                                             },
@@ -166,15 +176,10 @@ module.exports = () => ({
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            hmr: !isProduction,
-                        },
-                    },
-                    {
+                        options: {hmr: !isProduction},
+                    }, {
                         loader: 'css-loader',
-                        options: {
-                            sourceMap: !isProduction,
-                        },
+                        options: {sourceMap: !isProduction},
                     },
                 ],
             },
@@ -184,9 +189,7 @@ module.exports = () => ({
                 use: [
                     {
                         loader: 'file-loader',
-                        options: {
-                            name: 'images/[hash:base64:8].[ext]',
-                        },
+                        options: {name: 'images/[hash:base64:8].[ext]'},
                     },
                 ],
             },
@@ -201,9 +204,7 @@ module.exports = () => ({
                 use: [
                     {
                         loader: 'file-loader',
-                        options: {
-                            name: 'fonts/[hash:base64:8].[ext]',
-                        },
+                        options: {name: 'fonts/[hash:base64:8].[ext]'},
                     },
                 ],
             },
