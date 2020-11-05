@@ -9,6 +9,11 @@
     "sourceType": "module"
   },
   "extends": ["airbnb-base", "plugin:jest/recommended"],
+  "settins": {
+    "jest": {
+      "version": "detect"
+    }
+  },
   "rules": {
     // Enforce line breaks between array elements
     "array-element-newline": [
