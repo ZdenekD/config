@@ -5,7 +5,8 @@
   },
   "parser": "@babel/eslint-parser",
   "parserOptions": {
-    "sourceType": "module"
+    "sourceType": "module",
+    "requireConfigFile": false
   },
   "extends": ["airbnb-base"],
   "rules": {
@@ -86,6 +87,7 @@
         "allowForLoopAfterthoughts": true
       }
     ],
+    "no-undef": 0,
     // Disallow dangling underscores in identifiers
     "no-underscore-dangle": [
       "error",
@@ -146,8 +148,8 @@
       }
     ],
     // Off import errors (becauseof webpack config)
-    "import/no-extraneous-dependencies": 1,
-    "import/no-unresolved": 1,
+    "import/no-extraneous-dependencies": 0,
+    "import/no-unresolved": 0,
     "import/extensions": 1
   }
 }
