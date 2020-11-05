@@ -9,7 +9,7 @@
     "sourceType": "module"
   },
   "extends": ["airbnb-base", "plugin:jest/recommended"],
-  "settins": {
+  "settings": {
     "jest": {
       "version": "detect"
     }

@@ -1,14 +1,13 @@
 {
   "env": {
     "browser": true,
-    "node": true,
-    "jest": true
+    "node": true
   },
   "parser": "babel-eslint",
   "parserOptions": {
     "sourceType": "module"
   },
-  "extends": ["airbnb-base", "plugin:jest/recommended"],
+  "extends": ["airbnb-base"],
   "rules": {
     // Enforce line breaks between array elements
     "array-element-newline": [
@@ -96,7 +95,6 @@
         "allowAfterSuper": true
       }
     ],
-    "no-unused-vars": 0,
     // Require or disallow padding lines between statements (padding-line-between-statements)
     "padding-line-between-statements": [
       "error",
@@ -147,11 +145,9 @@
         "asyncArrow": "always"
       }
     ],
-    // Enforce valid expect() usage (valid-expect)
-    "jest/valid-expect": 1,
     // Off import errors (becauseof webpack config)
     "import/no-extraneous-dependencies": 1,
-    "import/no-unresolved": 0,
+    "import/no-unresolved": 1,
     "import/extensions": 1
   }
 }
