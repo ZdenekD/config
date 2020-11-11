@@ -12,9 +12,13 @@ module.exports = {
     testMatch: ['<rootDir>/src/**/*.{spec,test}.{ts,tsx}'],
     clearMocks: true,
     collectCoverage: true,
-    collectCoverageFrom: ['src/**/*.{ts,tsx}', '!src/**/*.d.ts', '!src/index.{ts,tsx}'],
+    collectCoverageFrom: [
+        'src/**/*.{ts,tsx}',
+        '!src/**/*.d.ts',
+        '!src/index.{ts,tsx}',
+    ],
     coverageDirectory: './__test__/coverage',
     coverageReporters: ['html', 'lcov'],
-    setupFiles: ['<rootDir>/src/__test__/utils/setup.js'],
+    setupFiles: ['<rootDir>/src/__test__/utils/enzyme.js'],
     snapshotSerializers: ['jest-serializer-html'],
 };
