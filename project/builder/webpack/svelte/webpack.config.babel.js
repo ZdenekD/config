@@ -1,6 +1,7 @@
 import path from 'path';
 import chalk from 'chalk';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
+import DefinePlugin from 'extended-define-webpack-plugin';
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 import HtmlReplaceWebpackPlugin from 'html-replace-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
@@ -12,7 +13,7 @@ import preprocessor from 'svelte-preprocess';
 const env = require('dotenv').config().parsed;
 const config = require('./config.json');
 
-const isProduction = env.NODE_ENV === 'production';
+const isProduction = process.env.NODE_ENV === 'production';
 const {entry, output, styles, assets} = config;
 const plugins = [];
 
