@@ -23,6 +23,7 @@
 
     Plugins
         copy-webpack-plugin
+        extended-define-webpack-plugin
         html-replace-webpack-plugin
         html-webpack-plugin
         imagemin-webpack-plugin
@@ -39,6 +40,10 @@
 
     "start": "NODE_ENV=development webpack-dev-server --mode development --color --compress --open",
     "build": "yarn clean && yarn format && NODE_ENV=production webpack --mode production"
+
+**Install**
+
+    yarn add -D webpack webpack-cli webpack-dev-server chalk babel-loader css-loader file-loader postcss-loader style-loader @svgr/webpack copy-webpack-plugin extended-define-webpack-plugin favicons-webpack-plugin html-replace-webpack-plugin html-webpack-plugin imagemin-webpack-plugin mini-css-extract-plugin progress-bar-webpack-plugin @babel/register @hot-loader/react-dom dotenv
 
 ---
 
@@ -107,4 +112,4 @@
 
 **Install**
 
-    yarn add -D webpack webpack-cli webpack-dev-server chalk babel-loader css-loader file-loader postcss-loader style-loader svelte-loader svelte-preprocess @svgr/webpack copy-webpack-plugin favicons-webpack-plugin html-replace-webpack-plugin html-webpack-plugin imagemin-webpack-plugin mini-css-extract-plugin progress-bar-webpack-plugin
+    yarn add -D webpack webpack-cli webpack-dev-server chalk babel-loader css-loader file-loader postcss-loader style-loader svelte-loader svelte-preprocess @svgr/webpack copy-webpack-plugin extended-define-webpack-plugin favicons-webpack-plugin html-replace-webpack-plugin html-webpack-plugin imagemin-webpack-plugin mini-css-extract-plugin progress-bar-webpack-plugin @babel/register dotenv

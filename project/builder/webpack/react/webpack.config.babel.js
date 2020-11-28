@@ -1,6 +1,7 @@
 import path from 'path';
 import chalk from 'chalk';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
+import DefinePlugin from 'extended-define-webpack-plugin';
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 import HtmlReplaceWebpackPlugin from 'html-replace-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
@@ -8,8 +9,7 @@ import ImageminPlugin from 'imagemin-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ProgressPlugin from 'progress-bar-webpack-plugin';
 
-require('dotenv').config();
-
+const env = require('dotenv').config().parsed;
 const config = require('./config.json');
 
 const isProduction = process.env.NODE_ENV === 'production';
@@ -32,7 +32,12 @@ plugins.push(
             useShortDoctype: true,
         },
         robots: isProduction ? 'index, follow' : 'noindex, nofollow',
-    }),
+    })
+);
+
+// Environment variables
+plugins.push(
+    new DefinePlugin({env})
 );
 
 // CSS extract plugin
@@ -41,17 +46,17 @@ if (styles.extract) {
         new MiniCssExtractPlugin({
             filename: '[name].[hash].css',
             chunkFilename: '[id].[hash].css',
-        }),
+        })
     );
 }
 
 // Copy and HTML replace webpack plugins
 if (assets) {
-    const copy = [];
+    const copy = {patterns: []};
     const replace = [];
 
     Object.keys(assets).forEach(key => {
-        copy.push({
+        copy.patterns.push({
             from: assets[key],
             to: key,
         });
@@ -62,7 +67,7 @@ if (assets) {
         });
     });
 
-    copy.push({
+    copy.patterns.push({
         from: './robots.txt',
         to: '',
     });
@@ -91,7 +96,7 @@ plugins.push(
         },
         svgo: {plugins: [{removeViewBox: false}, {cleanupIDs: true}]},
         webp: {quality: 90},
-    }),
+    })
 );
 
 // Favicons plugin
@@ -113,15 +118,13 @@ module.exports = () => ({
     plugins,
     resolve: {
         extensions: ['.js', '.jsx'],
-        alias: {
-            'react-dom': '@hot-loader/react-dom',
-        },
+        alias: {'react-dom': '@hot-loader/react-dom'},
     },
     devServer: {
         contentBase: path.resolve(__dirname, output),
         historyApiFallback: true,
         noInfo: true,
-        port: process.env.WEBPACK_PORT || 3010,
+        port: env.WEBPACK_PORT || 3010,
         stats: 'errors-only',
         hot: true,
     },
@@ -133,11 +136,7 @@ module.exports = () => ({
                 test: /\.js(x)?$/,
                 include: path.resolve(__dirname, 'src'),
                 exclude: /node_modules|vendor/,
-                use: [
-                    {
-                        loader: 'babel-loader?cacheDirectory',
-                    },
-                ],
+                use: [{loader: 'babel-loader?cacheDirectory'}],
             },
             {
                 test: /\.css$/,
@@ -146,30 +145,24 @@ module.exports = () => ({
                 use: [
                     styles.extract
                         ? {
-                              loader: MiniCssExtractPlugin.loader,
-                              options: {
-                                  hmr: !isProduction,
-                              },
-                          }
-                        : {
-                              loader: 'style-loader',
-                          },
+                            loader: MiniCssExtractPlugin.loader,
+                            options: {hmr: !isProduction},
+                        }
+                        : {loader: 'style-loader'},
                     {
                         loader: 'css-loader',
                         options: {
                             modules: {
                                 mode: 'local',
                                 localIdentName: !isProduction ? '[name]-[local]--[hash:base64:6]' : '[hash:base64:8]',
-                                context: path.resolve(__dirname, 'src'),
+                                localIdentContext: path.resolve(__dirname, 'src'),
                             },
                             sourceMap: !isProduction,
                         },
                     },
                     {
                         loader: 'postcss-loader',
-                        options: {
-                            sourceMap: 'inline',
-                        },
+                        options: {sourceMap: !isProduction},
                     },
                 ],
             },
@@ -179,9 +172,7 @@ module.exports = () => ({
                 use: [
                     {
                         loader: 'file-loader',
-                        options: {
-                            name: 'images/[hash:base64:8].[ext]',
-                        },
+                        options: {name: 'images/[hash:base64:8].[ext]'},
                     },
                 ],
             },
@@ -196,9 +187,7 @@ module.exports = () => ({
                 use: [
                     {
                         loader: 'file-loader',
-                        options: {
-                            name: 'fonts/[hash:base64:8].[ext]',
-                        },
+                        options: {name: 'fonts/[hash:base64:8].[ext]'},
                     },
                 ],
             },

@@ -4,11 +4,16 @@
     "node": true,
     "jest": true
   },
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "sourceType": "module"
   },
   "extends": ["airbnb-base", "plugin:jest/recommended"],
+  "settings": {
+    "jest": {
+      "version": "detect"
+    }
+  },
   "rules": {
     // Enforce line breaks between array elements
     "array-element-newline": [

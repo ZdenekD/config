@@ -6,6 +6,6 @@
 
 **Config**
 
-    /project/github/actions/jest.yml
-    /project/github/actions/snyk.yml
-    /project/github/actions/cypress.yml
+    /project/github/workflows/jest.yml
+    /project/github/workflows/snyk.yml
+    /project/github/workflows/cypress.yml

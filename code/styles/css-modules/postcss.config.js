@@ -6,12 +6,8 @@ module.exports = () => ({
         'postcss-import': {},
         'postcss-nested': {},
         'postcss-normalize': {},
-        'postcss-preset-env': {
-            stage: 1,
-        },
-        'postcss-modules': {
-            generateScopedName: process.env.NODE_ENV === 'development' ? '[name]-[local]--[hash:base64:6]' : '[hash:base64:8]',
-        },
+        'postcss-preset-env': {stage: 1},
+        'postcss-modules': {generateScopedName: process.env.NODE_ENV === 'development' ? '[name]-[local]--[hash:base64:6]' : '[hash:base64:8]'},
         'postcss-reporter': {clearReportedMessages: true},
         cssnano: process.env.NODE_ENV === 'production',
     },
