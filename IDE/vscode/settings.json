@@ -27,12 +27,13 @@
   "window.menuBarVisibility": "toggle",
   "workbench.activityBar.visible": true,
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.colorTheme": "Material Theme High Contrast",
+  "workbench.colorTheme": "Themer Dark",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
   "files.associations": {
     "*.svelte": "html"
   },
+  "files.autoSave": "off",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "breadcrumbs.enabled": true,
@@ -49,8 +50,10 @@
     "postcss": "css"
   },
   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+  "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "javascript.preferences.quoteStyle": "single",
+  "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
   "eslint.validate": ["html", "javascript", "javascriptreact", "svelte"],
   "eslint.lintTask.enable": true,
   "eslint.run": "onSave",
@@ -89,6 +92,15 @@
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[svelte]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
