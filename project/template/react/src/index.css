@@ -1,0 +1,11 @@
+@import './assets/styles/reset.css';
+@import './assets/styles/normalize.css';
+
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    font-family: Ubuntu, Tahoma, Nimbus Sans L, Free Sans, sans-serif;
+}

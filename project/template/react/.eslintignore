@@ -1,0 +1,12 @@
+node_modules/*
+bower_components/*
+vendor/*
+doc/*
+template/*
+**/dist/*
+**/build/*
+**/public/*
+.next
+test/*
+__test__/*
+hint-report/*

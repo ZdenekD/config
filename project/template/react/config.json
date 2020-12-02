@@ -1,0 +1,33 @@
+{
+  "entry": {
+    "app": "./src/index.jsx"
+  },
+  "output": "./build",
+  "production": "https://production.site",
+  "styles": {
+    "extract": true
+  },
+  "favicons": {
+    "cache": true,
+    "logo": "./public/favicon.png",
+    "prefix": "[hash:base64:8]",
+    "mode": "webapp",
+    "favicons": {
+      "appName": "App Name",
+      "appDescription": "App Description",
+      "developerName": "developer",
+      "developerURL": "https://develop.er",
+      "background": "#fff",
+      "icons": {
+        "android": true,
+        "appleIcon": true,
+        "appleStartup": false,
+        "coast": false,
+        "favicons": true,
+        "firefox": false,
+        "windows": true,
+        "yandex": false
+      }
+    }
+  }
+}
