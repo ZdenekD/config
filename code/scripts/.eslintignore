@@ -3,6 +3,7 @@ bower_components/*
 vendor/*
 doc/*
 **/dist/*
+**/build/*
 **/public/*
 .next
 test/*
