@@ -20,7 +20,6 @@ const plugins = [];
 plugins.push(
     new HtmlWebpackPlugin({
         template: path.resolve(__dirname, 'src/index.html'),
-        filename: 'index.html',
         inject: 'body',
         minify: {
             collapseWhitespace: true,
@@ -44,8 +43,8 @@ plugins.push(
 if (styles.extract) {
     plugins.unshift(
         new MiniCssExtractPlugin({
-            filename: '[name].[hash].css',
-            chunkFilename: '[id].[hash].css',
+            filename: '[name].[fullhash].css',
+            chunkFilename: '[id].[fullhash].css',
         })
     );
 }
@@ -110,8 +109,8 @@ plugins.push(new ProgressPlugin({format: `Building [:bar] ${chalk.green.bold(':p
 module.exports = () => ({
     entry,
     output: {
-        filename: '[name].[hash].js',
-        chunkFilename: '[name].[hash].js',
+        filename: '[name].[fullhash].js',
+        chunkFilename: '[name].[fullhash].js',
         path: path.resolve(__dirname, output),
         publicPath: '/',
     },
@@ -125,10 +124,12 @@ module.exports = () => ({
         historyApiFallback: true,
         noInfo: true,
         port: env.WEBPACK_PORT || 3010,
-        stats: 'errors-only',
         hot: true,
+        open: true,
+        compress: true,
     },
-    devtool: !isProduction ? 'cheap-module-eval-source-map' : '',
+    devtool: !isProduction ? 'inline-source-map' : undefined,
+    stats: 'errors-only',
     context: __dirname,
     module: {
         rules: [
@@ -144,10 +145,7 @@ module.exports = () => ({
                 exclude: /node_modules|vendor/,
                 use: [
                     styles.extract
-                        ? {
-                            loader: MiniCssExtractPlugin.loader,
-                            options: {hmr: !isProduction},
-                        }
+                        ? {loader: MiniCssExtractPlugin.loader}
                         : {loader: 'style-loader'},
                     {
                         loader: 'css-loader',
@@ -169,12 +167,7 @@ module.exports = () => ({
             {
                 test: /\.(gif|png|jpe?g|webp)$/i,
                 exclude: /node_modules|vendor/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {name: 'images/[hash:base64:8].[ext]'},
-                    },
-                ],
+                type: 'asset/resource',
             },
             {
                 test: /\.svg$/,
@@ -184,12 +177,7 @@ module.exports = () => ({
             {
                 test: /\.(woff|woff2)/,
                 exclude: /node_modules|vendor/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {name: 'fonts/[hash:base64:8].[ext]'},
-                    },
-                ],
+                type: 'asset/resource',
             },
         ],
     },
