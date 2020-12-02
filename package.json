@@ -5,7 +5,7 @@
   "author": "ZdenekD <ditezdenek@pm.me>",
   "license": "MIT",
   "scripts": {
-    "reinstall": "rm -rf 'yarn.lock' 'package-lock.json' 'node_modules' && yarn",
+    "reinstall": "rm -rf 'yarn.lock' 'node_modules' && yarn",
     "sync": "aws s3 sync doc/images s3://zdenekd-document-images --delete"
   },
   "engines": {
