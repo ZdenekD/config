@@ -4,7 +4,7 @@
 
     @babel/core
     @babel/preset-env
-    babel-eslint
+    @babel/eslint-parser
     babel-jest
     core-js@3
     eslint
@@ -16,7 +16,7 @@
 
 **Install**
 
-    yarn add -D @babel/core @babel/preset-env babel-eslint babel-jest core-js@3 eslint eslint-config-airbnb-base eslint-plugin-import eslint-plugin-jest jest jest-serializer-html
+    yarn add -D @babel/core @babel/preset-env @babel/eslint-parser babel-jest core-js@3 eslint eslint-config-airbnb-base eslint-plugin-import eslint-plugin-jest jest jest-serializer-html
 
 ---
 

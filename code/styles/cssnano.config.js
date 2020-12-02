@@ -1,12 +1,9 @@
 module.exports = {
     preset: [
-        'default',
-        {
+        'default', {
             zindex: false,
             calc: false,
-            discardComments: {
-                removeAll: true,
-            },
+            discardComments: {removeAll: true},
         },
     ],
 };

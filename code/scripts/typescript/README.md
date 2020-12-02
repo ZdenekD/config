@@ -6,7 +6,7 @@
     @typescript-eslint/parser
     @typescript-eslint/typescript-estree
     typescript
-    babel-eslint
+    @babel/eslint-parser
     eslint
     eslint-config-airbnb-base
     eslint-plugin-import
@@ -17,7 +17,7 @@
 
 **Install**
 
-    yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser @typescript-eslint/typescript-estree typescript babel-eslint eslint eslint-config-airbnb-base eslint-plugin-import eslint-plugin-jest jest ts-jest jest-serializer-html
+    yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser @typescript-eslint/typescript-estree typescript @babel/eslint-parser eslint eslint-config-airbnb-base eslint-plugin-import eslint-plugin-jest jest ts-jest jest-serializer-html
 
 ---
 
