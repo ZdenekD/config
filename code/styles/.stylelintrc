@@ -29,13 +29,13 @@
     "at-rule-empty-line-before": ["always", {
       "except": ["blockless-after-same-name-blockless"],
       "ignore": ["after-comment"],
-      "ignoreAtRules": ["font-face", "mixin", "include", "extend"]
+      "ignoreAtRules": ["font-face", "mixin", "include", "extend", "tailwind", "apply"]
     }],
     "at-rule-name-case": "lower",
     "at-rule-name-space-after": "always",
     "at-rule-no-vendor-prefix": true,
     "at-rule-no-unknown": [true, {
-      "ignoreAtRules": ["import-normalize", "mixin", "include", "extend"]
+      "ignoreAtRules": ["import-normalize", "mixin", "include", "extend", "tailwind", "apply"]
     }],
     "at-rule-semicolon-newline-after": "always",
     "at-rule-semicolon-space-before": "never",
