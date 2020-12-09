@@ -3,6 +3,7 @@
     "app": "./src/index.jsx"
   },
   "output": "./dist",
+  "html": "./src/index.html",
   "production": "https://production.site",
   "styles": {
     "extract": true

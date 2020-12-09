@@ -14,13 +14,19 @@ const env = require('dotenv').config().parsed;
 const config = require('./config.json');
 
 const isProduction = process.env.NODE_ENV === 'production';
-const {entry, output, styles, assets} = config;
+const {
+    entry = {app: './src/index.jsx'},
+    output = './dist',
+    html = './src/index.html',
+    styles,
+    assets,
+} = config;
 const plugins = [];
 
 // HTML webpack plugin
 plugins.push(
     new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, 'src/index.html'),
+        template: path.resolve(__dirname, html),
         filename: 'index.html',
         inject: 'body',
         minify: {
