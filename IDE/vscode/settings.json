@@ -30,9 +30,6 @@
   "workbench.colorTheme": "Themer Dark",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
-  "files.associations": {
-    "*.svelte": "html"
-  },
   "files.autoSave": "off",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
@@ -70,6 +67,7 @@
   "prettier.tabWidth": 4,
   "prettier.trailingComma": "all",
   "prettier.bracketSpacing": false,
+  "prettier.arrowParens": "avoid",
   "prettier.htmlWhitespaceSensitivity": "strict",
   "tslint.packageManager": "yarn",
   "[css]": {
