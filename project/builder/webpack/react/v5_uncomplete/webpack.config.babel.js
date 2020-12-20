@@ -49,8 +49,8 @@ plugins.push(
 if (styles.extract) {
     plugins.unshift(
         new MiniCssExtractPlugin({
-            filename: '[name].[fullhash].css',
-            chunkFilename: '[id].[fullhash].css',
+            filename: '[hash:8].css',
+            chunkFilename: '[hash:8].css',
         })
     );
 }
@@ -115,8 +115,8 @@ plugins.push(new ProgressPlugin({format: `Building [:bar] ${chalk.green.bold(':p
 module.exports = () => ({
     entry,
     output: {
-        filename: '[name].[fullhash].js',
-        chunkFilename: '[name].[fullhash].js',
+        filename: '[hash:8].js',
+        chunkFilename: '[hash:8].js',
         path: path.resolve(__dirname, output),
         publicPath: '/',
     },
