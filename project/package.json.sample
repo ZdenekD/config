@@ -10,7 +10,7 @@
   "scripts": {
     "clean": "rm -rf ./dist/*",
     "reinstall": "rm -rf 'yarn.lock' 'node_modules' && yarn",
-    "start": "NODE_ENV=development webpack-dev-server --mode development --color --compress --open",
+    "start": "NODE_ENV=development webpack-dev-server --mode development",
     "build": "yarn clean && NODE_ENV=production webpack --mode production",
     "jest": "jest --watch",
     "jest:coverage": "jest --coverage",

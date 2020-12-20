@@ -1,8 +1,9 @@
 {
   "entry": {
-    "app": "./src/index.jsx"
+    "app": "./src/index.js"
   },
   "output": "./dist",
+  "html": "./src/index.html",
   "production": "https://production.site",
   "styles": {
     "extract": true

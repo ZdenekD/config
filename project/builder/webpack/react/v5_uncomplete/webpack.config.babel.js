@@ -13,13 +13,19 @@ const env = require('dotenv').config().parsed;
 const config = require('./config.json');
 
 const isProduction = process.env.NODE_ENV === 'production';
-const {entry, output, styles, assets} = config;
+const {
+    entry = {app: './src/index.jsx'},
+    output = './dist',
+    html = './src/index.html',
+    styles,
+    assets,
+} = config;
 const plugins = [];
 
 // HTML webpack plugin
 plugins.push(
     new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, 'src/index.html'),
+        template: path.resolve(__dirname, html),
         inject: 'body',
         minify: {
             collapseWhitespace: true,
@@ -43,8 +49,8 @@ plugins.push(
 if (styles.extract) {
     plugins.unshift(
         new MiniCssExtractPlugin({
-            filename: '[name].[fullhash].css',
-            chunkFilename: '[id].[fullhash].css',
+            filename: '[hash:8].css',
+            chunkFilename: '[hash:8].css',
         })
     );
 }
@@ -109,8 +115,8 @@ plugins.push(new ProgressPlugin({format: `Building [:bar] ${chalk.green.bold(':p
 module.exports = () => ({
     entry,
     output: {
-        filename: '[name].[fullhash].js',
-        chunkFilename: '[name].[fullhash].js',
+        filename: '[hash:8].js',
+        chunkFilename: '[hash:8].js',
         path: path.resolve(__dirname, output),
         publicPath: '/',
     },
