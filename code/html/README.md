@@ -69,10 +69,12 @@
     @storybook/addon-storysource
     @storybook/addon-viewport
     @storybook/addon-docs
+    @storybook/addon-a11y
+    @storybook/addon-backgrounds
 
 **Install**
 
-    yarn add -D @storybook/react @storybook/addon-storysource @storybook/addon-viewport @storybook/addon-docs
+    yarn add -D @storybook/react @storybook/addon-storysource @storybook/addon-viewport @storybook/addon-docs @storybook/addon-a11y @storybook/addon-backgrounds
 
 ---
 

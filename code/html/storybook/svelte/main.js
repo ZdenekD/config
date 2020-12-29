@@ -1,4 +1,4 @@
-const path = require('path');
+const preprocessor = require('svelte-preprocess');
 
 module.exports = {
     stories: ['../src/**/*.stories.js'],
@@ -12,6 +12,12 @@ module.exports = {
     webpackFinal: async (config, {configType}) => {
         const isProduction = configType === 'production';
         const index = config.module.rules.findIndex(item => item.test.toString() === /\.css$/.toString());
+        const svelte = config.module.rules.find(rule => rule.loader && rule.loader.includes('svelte-loader'));
+
+        svelte.options = {
+            ...svelte.options,
+            preprocess: preprocessor({postcss: true}),
+        };
 
         config.module.rules.splice(index, 1);
         config.module.rules.push({
@@ -20,18 +26,11 @@ module.exports = {
                 {loader: 'style-loader'},
                 {
                     loader: 'css-loader',
-                    options: {
-                        modules: {
-                            mode: 'local',
-                            localIdentName: !isProduction ? '[name]-[local]--[hash:base64:6]' : '[hash:base64:8]',
-                            context: path.resolve(__dirname, 'src'),
-                        },
-                        sourceMap: !isProduction,
-                    },
+                    options: {sourceMap: !isProduction},
                 },
                 {
                     loader: 'postcss-loader',
-                    options: {sourceMap: 'inline'},
+                    options: {sourceMap: !isProduction},
                 },
             ],
         });
