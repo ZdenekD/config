@@ -13,6 +13,7 @@
   "editor.renderLineHighlight": "none",
   "editor.tabSize": 4,
   "editor.renderWhitespace": "all",
+  "editor.wordWrap": "wordWrapColumn",
   "editor.wordWrapColumn": 120,
   "editor.fastScrollSensitivity": 10,
   "editor.codeActionsOnSave": {
