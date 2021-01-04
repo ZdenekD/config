@@ -12,10 +12,6 @@ module.exports = {
         speed: 1,
         quality: 90,
     },
-    svgo: {
-        plugins: [{removeViewBox: false}, {cleanupIDs: true}],
-    },
-    webp: {
-        quality: 90,
-    },
+    svgo: {plugins: [{removeViewBox: false}, {cleanupIDs: true}]},
+    webp: {quality: 90},
 };

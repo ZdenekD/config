@@ -47,9 +47,7 @@ module.exports = {
     },
     report: ['browser'],
     engine: 'puppeteer',
-    engineOptions: {
-        args: ['--lang=cs-CZ', '--no-sandbox'],
-    },
+    engineOptions: {args: ['--lang=cs-CZ', '--no-sandbox']},
     engineFlags: [],
     asyncCaptureLimit: 5,
     asyncCompareLimit: 50,
