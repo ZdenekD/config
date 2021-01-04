@@ -17,8 +17,7 @@ Description how to set project on local machine
 ```
 git clone https://github.com/repo/your-project.git
 cd your-project/
-composer install (if composer.json exists)
-yarn (if package.json exists)
+yarn
 ```
 
 ### Development

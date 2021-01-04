@@ -16,6 +16,7 @@ module.exports = {
         'src/**/*.{ts,tsx}',
         '!src/**/*.d.ts',
         '!src/index.{ts,tsx}',
+        '!src/**/*.stories.{ts,tsx}',
     ],
     coverageDirectory: './__test__/coverage',
     coverageReporters: ['html', 'lcov'],

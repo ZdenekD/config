@@ -75,3 +75,4 @@
 
     /code/scripts/utils/transform/css.js
     /code/scripts/utils/transform/file.js
+    /code/scripts/utils/transform/svg.js

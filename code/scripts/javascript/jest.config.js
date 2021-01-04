@@ -11,7 +11,11 @@ module.exports = {
     testMatch: ['<rootDir>/src/**/*.{spec,test}.js'],
     clearMocks: true,
     collectCoverage: true,
-    collectCoverageFrom: ['src/**/*.js', '!src/index.js'],
+    collectCoverageFrom: [
+        'src/**/*.js',
+        '!src/index.js',
+        '!src/**/*.stories.js',
+    ],
     coverageDirectory: './__test__/coverage',
     coverageReporters: ['html', 'lcov'],
     snapshotSerializers: ['jest-serializer-html'],
