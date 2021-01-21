@@ -59,22 +59,29 @@
 
 -   Build and document UI components
 
-### React
+### React / Svelte
 
--   In `main.js` is webpack styles rules overwritten by my own rule
+-   In `main.js` is webpack styles rules overwritten by own rules (use different styles and svg settings)
 
-**Packages**
+**Packages Addons**
 
-    @storybook/react
     @storybook/addon-storysource
     @storybook/addon-viewport
     @storybook/addon-docs
     @storybook/addon-a11y
     @storybook/addon-backgrounds
 
+**Packages React**
+
+    @storybook/react
+
+**Packages Svelte**
+
+    @storybook/svelte
+
 **Install**
 
-    yarn add -D @storybook/react @storybook/addon-storysource @storybook/addon-viewport @storybook/addon-docs @storybook/addon-a11y @storybook/addon-backgrounds
+    yarn add -D @storybook/addon-storysource @storybook/addon-viewport @storybook/addon-docs @storybook/addon-a11y @storybook/addon-backgrounds
 
 ---
 

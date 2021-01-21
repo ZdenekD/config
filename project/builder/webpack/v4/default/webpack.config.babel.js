@@ -14,8 +14,8 @@ const config = require('./config.json');
 
 const isProduction = process.env.NODE_ENV === 'production';
 const {
-    entry = {app: './src/index.jsx'},
-    output = './dist',
+    entry = {app: './src/index.js'},
+    output = 'dist',
     html = './src/index.html',
     styles,
     assets,
@@ -112,7 +112,7 @@ if (config.favicons) {
 // Progress bar plugin
 plugins.push(new ProgressPlugin({format: `Building [:bar] ${chalk.green.bold(':percent')} (:elapsed seconds)`}));
 
-module.exports = () => ({
+export default () => ({
     entry,
     output: {
         filename: '[hash:8].js',
@@ -134,21 +134,21 @@ module.exports = () => ({
         open: true,
         compress: true,
     },
-    devtool: !isProduction ? 'inline-source-map' : undefined,
+    devtool: !isProduction ? 'cheap-module-eval-source-map' : undefined,
     stats: 'errors-only',
     context: __dirname,
     module: {
         rules: [
             {
-                test: /\.js(x)?$/,
+                test: /\.jsx?$/,
                 include: path.resolve(__dirname, 'src'),
-                exclude: /node_modules|vendor/,
+                exclude: /node_modules/,
                 use: [{loader: 'babel-loader?cacheDirectory'}],
             },
             {
                 test: /\.css$/,
                 include: path.resolve(__dirname, 'src'),
-                exclude: /node_modules|vendor/,
+                exclude: /node_modules/,
                 use: [
                     styles.extract
                         ? {loader: MiniCssExtractPlugin.loader}
@@ -172,18 +172,28 @@ module.exports = () => ({
             },
             {
                 test: /\.(gif|png|jpe?g|webp)$/i,
-                exclude: /node_modules|vendor/,
-                type: 'asset/resource',
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {name: '[hash:base64:8].[ext]'},
+                    },
+                ],
             },
             {
                 test: /\.svg$/,
-                exclude: /node_modules|vendor/,
+                exclude: /node_modules/,
                 use: ['@svgr/webpack'],
             },
             {
-                test: /\.(woff|woff2)/,
-                exclude: /node_modules|vendor/,
-                type: 'asset/resource',
+                test: /\.woff2?$/,
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {name: '[hash:base64:8].[ext]'},
+                    },
+                ],
             },
         ],
     },

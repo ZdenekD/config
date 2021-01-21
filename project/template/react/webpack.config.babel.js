@@ -13,13 +13,19 @@ const env = require('dotenv').config().parsed;
 const config = require('./config.json');
 
 const isProduction = process.env.NODE_ENV === 'production';
-const {entry, output, styles, assets} = config;
+const {
+    entry = {app: './src/index.js'},
+    output = 'dist',
+    html = './src/index.html',
+    styles,
+    assets,
+} = config;
 const plugins = [];
 
 // HTML webpack plugin
 plugins.push(
     new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, 'src/index.html'),
+        template: path.resolve(__dirname, html),
         inject: 'body',
         minify: {
             collapseWhitespace: true,
@@ -43,8 +49,8 @@ plugins.push(
 if (styles.extract) {
     plugins.unshift(
         new MiniCssExtractPlugin({
-            filename: '[hash].css',
-            chunkFilename: '[hash].css',
+            filename: '[hash:8].css',
+            chunkFilename: '[hash:8].css',
         })
     );
 }
@@ -106,11 +112,11 @@ if (config.favicons) {
 // Progress bar plugin
 plugins.push(new ProgressPlugin({format: `Building [:bar] ${chalk.green.bold(':percent')} (:elapsed seconds)`}));
 
-module.exports = () => ({
+export default () => ({
     entry,
     output: {
-        filename: '[hash].js',
-        chunkFilename: '[hash].js',
+        filename: '[hash:8].js',
+        chunkFilename: '[hash:8].js',
         path: path.resolve(__dirname, output),
         publicPath: '/',
     },
@@ -134,15 +140,15 @@ module.exports = () => ({
     module: {
         rules: [
             {
-                test: /\.js(x)?$/,
+                test: /\.jsx?$/,
                 include: path.resolve(__dirname, 'src'),
-                exclude: /node_modules|vendor/,
+                exclude: /node_modules/,
                 use: [{loader: 'babel-loader?cacheDirectory'}],
             },
             {
                 test: /\.css$/,
                 include: path.resolve(__dirname, 'src'),
-                exclude: /node_modules|vendor/,
+                exclude: /node_modules/,
                 use: [
                     styles.extract
                         ? {loader: MiniCssExtractPlugin.loader}
@@ -166,7 +172,7 @@ module.exports = () => ({
             },
             {
                 test: /\.(gif|png|jpe?g|webp)$/i,
-                exclude: /node_modules|vendor/,
+                exclude: /node_modules/,
                 use: [
                     {
                         loader: 'file-loader',
@@ -176,12 +182,12 @@ module.exports = () => ({
             },
             {
                 test: /\.svg$/,
-                exclude: /node_modules|vendor/,
+                exclude: /node_modules/,
                 use: ['@svgr/webpack'],
             },
             {
-                test: /\.(woff|woff2)/,
-                exclude: /node_modules|vendor/,
+                test: /\.woff2?$/,
+                exclude: /node_modules/,
                 use: [
                     {
                         loader: 'file-loader',

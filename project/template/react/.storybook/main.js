@@ -6,12 +6,21 @@ module.exports = {
         '@storybook/addon-storysource',
         '@storybook/addon-viewport/register',
         '@storybook/addon-docs',
+        '@storybook/addon-a11y',
+        '@storybook/addon-backgrounds',
     ],
     webpackFinal: async (config, {configType}) => {
         const isProduction = configType === 'production';
-        const index = config.module.rules.findIndex(item => item.test.toString() === /\.css$/.toString());
+        const cssIndex = config.module.rules.findIndex(item => item.test.toString() === /\.css$/.toString());
 
-        config.module.rules.splice(index, 1);
+        // eslint-disable-next-line no-param-reassign
+        config.module.rules = config.module.rules.map(rule => (rule.test.toString().search('svg') > 0
+            ? {
+                ...rule,
+                test: RegExp(rule.test.toString().replace('svg|', '').replace(/\//g, '')),
+            }
+            : rule));
+        config.module.rules.splice(cssIndex, 1);
         config.module.rules.push({
             test: /\.css$/,
             use: [
@@ -22,16 +31,20 @@ module.exports = {
                         modules: {
                             mode: 'local',
                             localIdentName: !isProduction ? '[name]-[local]--[hash:base64:6]' : '[hash:base64:8]',
-                            localIdentContext: path.resolve(__dirname, 'src'),
+                            context: path.resolve(__dirname, 'src'),
                         },
                         sourceMap: !isProduction,
                     },
                 },
                 {
                     loader: 'postcss-loader',
-                    options: {sourceMap: !isProduction},
+                    options: {sourceMap: 'inline'},
                 },
             ],
+        }, {
+            test: /\.svg$/,
+            exclude: /node_modules/,
+            use: [{loader: '@svgr/webpack'}],
         });
 
         return config;

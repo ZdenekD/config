@@ -5,6 +5,16 @@
 -   It uses HMR (Hot Modules Reload) - for using it look at [HotLoader / React](https://github.com/gaearon/react-hot-loader#hot-loaderreact-dom)
 -   It uses `postcss` and `css-modules`
 
+**Config**
+
+#### version 4
+
+    /project/builder/webpack/v4/default/webpack.config.babel.js
+
+#### version 5
+
+    /project/builder/webpack/v5/default/webpack.config.babel.js
+
 **Dependencies**
 
     Webpack
@@ -24,6 +34,7 @@
     Plugins
         copy-webpack-plugin
         extended-define-webpack-plugin
+        favicons-webpack-plugin
         html-replace-webpack-plugin
         html-webpack-plugin
         imagemin-webpack-plugin
@@ -35,11 +46,6 @@
         @hot-loader/react-dom
         dotenv
         svelte-preprocess
-
-**Tasks**
-
-    "start": "NODE_ENV=development webpack-dev-server --mode development --color --compress --open",
-    "build": "yarn clean && yarn format && NODE_ENV=production webpack --mode production"
 
 **Install**
 
@@ -108,7 +114,7 @@
 
 **Config**
 
-    /project/builder/webpack/svelte/webpack.config.babel.js
+    /project/builder/webpack/v4/svelte/webpack.config.babel.js
 
 **Install**
 

@@ -4,21 +4,28 @@
 
     @babel/core
     @babel/preset-env
+    @babel/preset-react
     @babel/preset-typescript
     @typescript-eslint/eslint-plugin
     @typescript-eslint/parser
     core-js@3
+    enzyme
+    @wojtekmaj/enzyme-adapter-react-17
     eslint
     eslint-config-airbnb-base
     eslint-plugin-import
     eslint-plugin-jest
+    eslint-plugin-jsx-a11y
+    eslint-plugin-react
+    eslint-plugin-react-hooks
     jest
+    jest-enzyme
     jest-serializer-html
     ts-jest
 
 **Install**
 
-    yarn add -D @babel/core @babel/preset-env @babel/preset-typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser core-js@3 eslint eslint-config-airbnb-base eslint-plugin-import eslint-plugin-jest jest jest-serializer-html ts-jest
+    yarn add -D @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser core-js@3 enzyme @wojtekmaj/enzyme-adapter-react-17 eslint eslint-config-airbnb-base eslint-plugin-import eslint-plugin-jest eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks jest jest-enzyme jest-serializer-html ts-jest
 
 ---
 

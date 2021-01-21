@@ -8,15 +8,14 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ImageminPlugin from 'imagemin-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ProgressPlugin from 'progress-bar-webpack-plugin';
-import preprocessor from 'svelte-preprocess';
 
 const env = require('dotenv').config().parsed;
 const config = require('./config.json');
 
 const isProduction = process.env.NODE_ENV === 'production';
 const {
-    entry = {app: './src/index.js'},
-    output = './dist',
+    entry = './src/index.js',
+    output = 'dist',
     html = './src/index.html',
     styles,
     assets,
@@ -50,8 +49,8 @@ plugins.push(
 if (styles.extract) {
     plugins.unshift(
         new MiniCssExtractPlugin({
-            filename: '[hash:8].css',
-            chunkFilename: '[hash:8].css',
+            filename: '[fullhash:8].css',
+            chunkFilename: '[fullhash:8].css',
         })
     );
 }
@@ -113,11 +112,11 @@ if (config.favicons) {
 // Progress bar plugin
 plugins.push(new ProgressPlugin({format: `Building [:bar] ${chalk.green.bold(':percent')} (:elapsed seconds)`}));
 
-module.exports = () => ({
+export default () => ({
     entry,
     output: {
-        filename: '[hash:8].js',
-        chunkFilename: '[hash:8].js',
+        filename: '[fullhash:8].js',
+        chunkFilename: '[fullhash:8].js',
         path: path.resolve(__dirname, output),
         publicPath: '/',
     },
@@ -125,16 +124,11 @@ module.exports = () => ({
     resolve: {
         extensions: [
             '.js',
-            '.mjs',
-            '.svelte',
+            '.jsx',
+            '.ts',
+            '.tsx',
         ],
-        alias: {svelte: path.resolve('node_modules', 'svelte')},
-        mainFields: [
-            'svelte',
-            'browser',
-            'module',
-            'main',
-        ],
+        alias: {'react-dom': '@hot-loader/react-dom'},
     },
     devServer: {
         contentBase: path.resolve(__dirname, output),
@@ -145,74 +139,57 @@ module.exports = () => ({
         open: true,
         compress: true,
     },
-    devtool: !isProduction ? 'cheap-module-eval-source-map' : undefined,
+    devtool: !isProduction ? 'inline-source-map' : undefined,
     stats: 'errors-only',
     context: __dirname,
+    target: 'web',
     module: {
         rules: [
             {
-                test: /\.svelte$/,
+                test: /\.(js|ts)x?$/,
                 include: path.resolve(__dirname, 'src'),
-                exclude: /node_modules|vendor/,
-                use: [
-                    {
-                        loader: 'svelte-loader',
-                        options: {
-                            emitCss: true,
-                            preprocess: preprocessor({
-                                babel: {
-                                    presets: [
-                                        [
-                                            '@babel/preset-env', {
-                                                useBuiltIns: 'usage',
-                                                corejs: 3,
-                                                modules: false,
-                                                targets: {esmodules: true},
-                                            },
-                                        ],
-                                    ],
-                                },
-                                postcss: true,
-                            }),
-                        },
-                    },
-                ],
+                exclude: /node_modules/,
+                use: [{loader: 'babel-loader?cacheDirectory'}],
             },
             {
                 test: /\.css$/,
                 include: path.resolve(__dirname, 'src'),
-                exclude: /node_modules|vendor/,
+                exclude: /node_modules/,
                 use: [
-                    {loader: MiniCssExtractPlugin.loader}, {
+                    styles.extract
+                        ? {loader: MiniCssExtractPlugin.loader}
+                        : {loader: 'style-loader'},
+                    {
                         loader: 'css-loader',
+                        options: {
+                            modules: {
+                                mode: 'local',
+                                localIdentName: !isProduction ? '[name]-[local]--[fullhash:base64:6]' : '[fullhash:base64:8]',
+                                localIdentContext: path.resolve(__dirname, 'src'),
+                            },
+                            sourceMap: !isProduction,
+                        },
+                    },
+                    {
+                        loader: 'postcss-loader',
                         options: {sourceMap: !isProduction},
                     },
                 ],
             },
             {
                 test: /\.(gif|png|jpe?g|webp)$/i,
-                exclude: /node_modules|vendor/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {name: '[hash:base64:8].[ext]'},
-                    },
-                ],
+                exclude: /node_modules/,
+                type: 'asset/resource',
             },
             {
                 test: /\.svg$/,
-                exclude: /node_modules|vendor/,
+                exclude: /node_modules/,
                 use: ['@svgr/webpack'],
             },
             {
-                test: /\.(woff|woff2)/,
-                exclude: /node_modules|vendor/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {name: '[hash:base64:8].[ext]'},
-                    },
-                ],
+                test: /\.woff2?$/,
+                exclude: /node_modules/,
+                type: 'asset/resource',
             },
         ],
     },

@@ -4,40 +4,24 @@
     "node": true,
     "jest": true
   },
-  "parser": "@babel/eslint-parser",
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     }
   },
-  "plugins": ["@typescript-eslint", "react-hooks"],
   "extends": ["airbnb-base", "plugin:@typescript-eslint/recommended", "plugin:jest/recommended"],
+  "plugins": ["@typescript-eslint"],
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "extensions": [".js", ".ts"]
       }
-    },
-    "react": {
-      "version": "detect"
     },
     "jest": {
       "version": "detect"
     }
   },
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx"],
-      "parser": "@typescript-eslint/parser",
-      "parserOptions": {
-        "ecmaVersion": 6,
-        "sourceType": "module",
-        "ecmaFeatures": {
-          "jsx": true
-        }
-      }
-    }
-  ],
   "rules": {
     // Enforce line breaks between array elements
     "array-element-newline": [
@@ -75,6 +59,8 @@
         "SwitchCase": 1
       }
     ],
+    // Require or disallow an empty line between class members
+    "lines-between-class-members": ["error", "always", {"exceptAfterSingleLine": true}],
     // Enforce consistent linebreak style
     "linebreak-style": ["error", "unix"],
     // Enforce consistent line breaks inside braces
@@ -116,6 +102,8 @@
         "allowForLoopAfterthoughts": true
       }
     ],
+    // Disallow variable declarations from shadowing variables declared in the outer scope
+    "no-shadow": "off",
     // Disallow dangling underscores in identifiers
     "no-underscore-dangle": [
       "error",
@@ -175,31 +163,13 @@
         "asyncArrow": "always"
       }
     ],
-    // Checks rules of Hooks
-    "react-hooks/rules-of-hooks": "error",
-    // Checks effect dependencies
-    "react-hooks/exhaustive-deps": "warn",
-    // Require explicit return types on functions and class methods
-    "@typescript-eslint/explicit-function-return-type": [
-      "error",
-      {
-        "allowExpressions": true
-      }
-    ],
-    // Enforce camelCase naming convention (camelcase)
-    "@typescript-eslint/camelcase": [
-      "error",
-      {
-        "properties": "never"
-      }
-    ],
-    // Enforce valid expect() usage (valid-expect)
-    "jest/valid-expect": 1,
     // Explicit accessibility modifiers on class properties and methods are not required
     "@typescript-eslint/explicit-member-accessibility": ["off"],
+    // Disallow variable declarations from shadowing variables declared in the outer scope
+    "@typescript-eslint/no-shadow": ["error"],
     // Off import errors (becauseof webpack config)
-    "import/no-extraneous-dependencies": 1,
-    "import/no-unresolved": 1,
-    "import/extensions": 1
+    "import/no-extraneous-dependencies": 0,
+    "import/no-unresolved": 0,
+    "import/extensions": 0
   }
 }
