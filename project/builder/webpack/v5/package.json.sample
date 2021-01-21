@@ -1,0 +1,31 @@
+{
+  "author": "developer",
+  "name": "project-name",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "homepage": "git@github.com:Developer/project-name.git#readme",
+  "repository": "git@github.com:Developer/project-name.git",
+  "scripts": {
+    "clean": "rm -rf ./dist/*",
+    "reinstall": "rm -rf 'yarn.lock' 'node_modules' && yarn",
+    "start": "NODE_ENV=development webpack serve --mode development",
+    "build": "yarn clean && NODE_ENV=production webpack --mode production",
+    "jest": "jest --watch",
+    "jest:coverage": "jest --coverage",
+    "story": "start-storybook -s ./public -p 8020",
+    "story:build": "build-storybook -c .storybook -o .storybook/build",
+    "cypress": "cypress run",
+    "cypress:open": "cypress open",
+    "hint:local": "hint http://localhost:3000",
+    "hint:dev": "hint https://project-development.url",
+    "hint:prod": "hint https://project-production.url"
+  },
+  "engines": {
+    "node": ">=12.0.0",
+    "npm": ">=6.9.0"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}

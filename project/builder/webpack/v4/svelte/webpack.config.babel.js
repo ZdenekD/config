@@ -8,14 +8,15 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ImageminPlugin from 'imagemin-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ProgressPlugin from 'progress-bar-webpack-plugin';
+import preprocessor from 'svelte-preprocess';
 
 const env = require('dotenv').config().parsed;
 const config = require('./config.json');
 
 const isProduction = process.env.NODE_ENV === 'production';
 const {
-    entry = {app: './src/index.jsx'},
-    output = './dist',
+    entry = {app: './src/index.js'},
+    output = 'dist',
     html = './src/index.html',
     styles,
     assets,
@@ -112,7 +113,7 @@ if (config.favicons) {
 // Progress bar plugin
 plugins.push(new ProgressPlugin({format: `Building [:bar] ${chalk.green.bold(':percent')} (:elapsed seconds)`}));
 
-module.exports = () => ({
+export default () => ({
     entry,
     output: {
         filename: '[hash:8].js',
@@ -122,8 +123,18 @@ module.exports = () => ({
     },
     plugins,
     resolve: {
-        extensions: ['.js', '.jsx'],
-        alias: {'react-dom': '@hot-loader/react-dom'},
+        extensions: [
+            '.js',
+            '.mjs',
+            '.svelte',
+        ],
+        alias: {svelte: path.resolve('node_modules', 'svelte')},
+        mainFields: [
+            'svelte',
+            'browser',
+            'module',
+            'main',
+        ],
     },
     devServer: {
         contentBase: path.resolve(__dirname, output),
@@ -140,39 +151,47 @@ module.exports = () => ({
     module: {
         rules: [
             {
-                test: /\.js(x)?$/,
+                test: /\.svelte$/,
                 include: path.resolve(__dirname, 'src'),
-                exclude: /node_modules|vendor/,
-                use: [{loader: 'babel-loader?cacheDirectory'}],
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: 'svelte-loader',
+                        options: {
+                            emitCss: true,
+                            preprocess: preprocessor({
+                                babel: {
+                                    presets: [
+                                        [
+                                            '@babel/preset-env', {
+                                                useBuiltIns: 'usage',
+                                                corejs: 3,
+                                                modules: false,
+                                                targets: {esmodules: true},
+                                            },
+                                        ],
+                                    ],
+                                },
+                                postcss: true,
+                            }),
+                        },
+                    },
+                ],
             },
             {
                 test: /\.css$/,
                 include: path.resolve(__dirname, 'src'),
-                exclude: /node_modules|vendor/,
+                exclude: /node_modules/,
                 use: [
-                    styles.extract
-                        ? {loader: MiniCssExtractPlugin.loader}
-                        : {loader: 'style-loader'},
-                    {
+                    {loader: MiniCssExtractPlugin.loader}, {
                         loader: 'css-loader',
-                        options: {
-                            modules: {
-                                mode: 'local',
-                                localIdentName: !isProduction ? '[name]-[local]--[hash:base64:6]' : '[hash:base64:8]',
-                                localIdentContext: path.resolve(__dirname, 'src'),
-                            },
-                            sourceMap: !isProduction,
-                        },
-                    },
-                    {
-                        loader: 'postcss-loader',
                         options: {sourceMap: !isProduction},
                     },
                 ],
             },
             {
                 test: /\.(gif|png|jpe?g|webp)$/i,
-                exclude: /node_modules|vendor/,
+                exclude: /node_modules/,
                 use: [
                     {
                         loader: 'file-loader',
@@ -182,12 +201,12 @@ module.exports = () => ({
             },
             {
                 test: /\.svg$/,
-                exclude: /node_modules|vendor/,
+                exclude: /node_modules/,
                 use: ['@svgr/webpack'],
             },
             {
-                test: /\.(woff|woff2)/,
-                exclude: /node_modules|vendor/,
+                test: /\.woff2?$/,
+                exclude: /node_modules/,
                 use: [
                     {
                         loader: 'file-loader',
