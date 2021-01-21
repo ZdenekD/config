@@ -35,7 +35,7 @@ There's minimal configurations editable for the needs of specific projects.
 
     -   ### [Documents](./project/documents/README.md)
 
-    -   ### [Build](./project/build/README.md)
+    -   ### [Build](./project/builder/README.md)
 
 ## &#128221; [Editor / IDE](./IDE/README.md)
 
