@@ -42,6 +42,13 @@
 
     /code/styles/css-modules/postcss.config.js
 
+#### Tailwindcss
+
+**Config**
+
+    /code/styles/tailwindcss/postcss.config.js
+    /code/styles/tailwindcss/tailwind.config.js
+
 ---
 
 ### &#128396; [Cssnano](https://cssnano.co)

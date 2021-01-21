@@ -4,6 +4,7 @@
     "module": "ESNext",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": true,
+    "jsx": "react",
     "sourceMap": true,
     "outDir": "./dist",
     "removeComments": true,

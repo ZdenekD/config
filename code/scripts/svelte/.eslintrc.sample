@@ -4,37 +4,25 @@
     "node": true,
     "jest": true
   },
-  "parser": "@babel/eslint-parser",
   "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    }
+    "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "react-hooks"],
-  "extends": ["airbnb-base", "plugin:@typescript-eslint/recommended", "plugin:jest/recommended"],
+  "extends": ["airbnb-base"],
+  "plugins": ["svelte3"],
   "settings": {
-    "import/resolver": {
-      "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
-    },
-    "react": {
-      "version": "detect"
-    },
     "jest": {
       "version": "detect"
     }
   },
   "overrides": [
     {
-      "files": ["*.ts", "*.tsx"],
-      "parser": "@typescript-eslint/parser",
-      "parserOptions": {
-        "ecmaVersion": 6,
-        "sourceType": "module",
-        "ecmaFeatures": {
-          "jsx": true
-        }
+      "files": ["**/*.svelte"],
+      "processor": "svelte3/svelte3",
+      "rules": {
+        "import/first": 0,
+        "import/no-mutable-exports": 0,
+        "import/prefer-default-export": 0,
+        "svelte3/ignore-styles": 0
       }
     }
   ],
@@ -75,6 +63,8 @@
         "SwitchCase": 1
       }
     ],
+    // Require or disallow an empty line between class members
+    "lines-between-class-members": ["error", "always", {"exceptAfterSingleLine": true}],
     // Enforce consistent linebreak style
     "linebreak-style": ["error", "unix"],
     // Enforce consistent line breaks inside braces
@@ -175,31 +165,9 @@
         "asyncArrow": "always"
       }
     ],
-    // Checks rules of Hooks
-    "react-hooks/rules-of-hooks": "error",
-    // Checks effect dependencies
-    "react-hooks/exhaustive-deps": "warn",
-    // Require explicit return types on functions and class methods
-    "@typescript-eslint/explicit-function-return-type": [
-      "error",
-      {
-        "allowExpressions": true
-      }
-    ],
-    // Enforce camelCase naming convention (camelcase)
-    "@typescript-eslint/camelcase": [
-      "error",
-      {
-        "properties": "never"
-      }
-    ],
-    // Enforce valid expect() usage (valid-expect)
-    "jest/valid-expect": 1,
-    // Explicit accessibility modifiers on class properties and methods are not required
-    "@typescript-eslint/explicit-member-accessibility": ["off"],
     // Off import errors (becauseof webpack config)
-    "import/no-extraneous-dependencies": 1,
-    "import/no-unresolved": 1,
-    "import/extensions": 1
+    "import/no-extraneous-dependencies": 0,
+    "import/no-unresolved": 0,
+    "import/extensions": 0
   }
 }
