@@ -10,8 +10,8 @@
       "jsx": true
     }
   },
-  "plugins": ["react", "react-hooks"],
   "extends": ["airbnb-base", "plugin:react/recommended", "plugin:jest/recommended", "plugin:jsx-a11y/recommended"],
+  "plugins": ["react", "react-hooks"],
   "settings": {
     "import/resolver": {
       "node": {
@@ -62,6 +62,8 @@
         "SwitchCase": 1
       }
     ],
+    // Require or disallow an empty line between class members
+    "lines-between-class-members": ["error", "always", {"exceptAfterSingleLine": true}],
     // Enforce consistent linebreak style
     "linebreak-style": ["error", "unix"],
     // Enforce consistent line breaks inside braces
@@ -91,7 +93,7 @@
     "no-console": [
       "error",
       {
-        "allow": ["info", "log", "assert"]
+        "allow": ["info", "log", "assert", "dir"]
       }
     ],
     // This rule aims to reduce the scrolling required when reading through your code. It will warn when the maximum amount of empty lines has been exceeded.
@@ -193,6 +195,8 @@
         "ignoreClassFields": true
       }
     ],
+    // Prevent missing props validation in a React component definition
+    "react/prop-types": 0,
     // Checks rules of Hooks
     "react-hooks/rules-of-hooks": "error",
     // Checks effect dependencies
@@ -207,11 +211,9 @@
         }
       }
     ],
-    // Enforce valid expect() usage (valid-expect)
-    "jest/valid-expect": 1,
     // Off import errors (becauseof webpack config)
-    "import/no-extraneous-dependencies": 1,
-    "import/no-unresolved": 1,
-    "import/extensions": 1
+    "import/no-extraneous-dependencies": 0,
+    "import/no-unresolved": 0,
+    "import/extensions": 0
   }
 }
