@@ -25,6 +25,8 @@
 
 -   ### [Typescript](./typescript/README.md)
 
+-   ### [Typescript React](./typescript-react/README.md)
+
 ---
 
 ### &#128640; [Prettier](https://prettier.io)
