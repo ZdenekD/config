@@ -166,6 +166,9 @@
         "asyncArrow": "always"
       }
     ],
+    // Note you must disable the base rule as it can report incorrect errors
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
     // Explicit accessibility modifiers on class properties and methods are not required
     "@typescript-eslint/explicit-member-accessibility": ["off"],
     // Disallow variable declarations from shadowing variables declared in the outer scope

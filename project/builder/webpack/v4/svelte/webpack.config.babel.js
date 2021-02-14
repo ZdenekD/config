@@ -1,5 +1,6 @@
 import path from 'path';
 import chalk from 'chalk';
+import dotenv from 'dotenv';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import DefinePlugin from 'extended-define-webpack-plugin';
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
@@ -9,10 +10,9 @@ import ImageminPlugin from 'imagemin-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ProgressPlugin from 'progress-bar-webpack-plugin';
 import preprocessor from 'svelte-preprocess';
+import config from './config.json';
 
-const env = require('dotenv').config().parsed;
-const config = require('./config.json');
-
+const env = dotenv.config().parsed;
 const isProduction = process.env.NODE_ENV === 'production';
 const {
     entry = {app: './src/index.js'},
@@ -148,6 +148,7 @@ export default () => ({
     devtool: !isProduction ? 'cheap-module-eval-source-map' : undefined,
     stats: 'errors-only',
     context: __dirname,
+    target: 'web',
     module: {
         rules: [
             {

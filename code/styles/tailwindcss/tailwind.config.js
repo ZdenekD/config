@@ -1,4 +1,4 @@
-const colors = require('tailwindcss/colors');
+import colors from 'tailwindcss/colors';
 
 module.exports = {
     purge: [
@@ -7,6 +7,10 @@ module.exports = {
         './src/**/*.js',
         './src/*.jsx',
         './src/**/*.jsx',
+        './src/*.ts',
+        './src/**/*.ts',
+        './src/*.tsx',
+        './src/**/*.tsx',
         './src/**/*.svelte',
     ],
     darkMode: false,

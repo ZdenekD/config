@@ -40,9 +40,3 @@ There's minimal configurations editable for the needs of specific projects.
 ## &#128221; [Editor / IDE](./IDE/README.md)
 
 -   Some base settings for code editors
-
-## &#127959; [Workflow](https://app.creately.com/diagram/hxmQB22aeoW/view)
-
--   Technologies and services used on projects
-
-![image](https://d1q8h8uqlxv0t0.cloudfront.net/workflow.png)

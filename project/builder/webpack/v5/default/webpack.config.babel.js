@@ -1,5 +1,6 @@
 import path from 'path';
 import chalk from 'chalk';
+import dotenv from 'dotenv';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import DefinePlugin from 'extended-define-webpack-plugin';
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
@@ -8,10 +9,9 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ImageminPlugin from 'imagemin-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ProgressPlugin from 'progress-bar-webpack-plugin';
+import config from './config.json';
 
-const env = require('dotenv').config().parsed;
-const config = require('./config.json');
-
+const env = dotenv.config().parsed;
 const isProduction = process.env.NODE_ENV === 'production';
 const {
     entry = './src/index.js',
@@ -164,7 +164,7 @@ export default () => ({
                         options: {
                             modules: {
                                 mode: 'local',
-                                localIdentName: !isProduction ? '[name]-[local]--[fullhash:base64:6]' : '[fullhash:base64:8]',
+                                localIdentName: !isProduction ? '[name]-[local]--[hash:base64:6]' : '[hash:base64:8]',
                                 localIdentContext: path.resolve(__dirname, 'src'),
                             },
                             sourceMap: !isProduction,

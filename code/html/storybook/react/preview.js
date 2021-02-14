@@ -1,5 +1,4 @@
-import {addDecorator, addParameters} from '@storybook/react';
-import React from 'react';
+import {addParameters} from '@storybook/react';
 
 const viewports = {
     320: {
@@ -32,5 +31,4 @@ const viewports = {
     },
 };
 
-addDecorator(storyFn => <>{storyFn()}</>);
 addParameters({viewport: {viewports}});
