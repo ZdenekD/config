@@ -124,3 +124,9 @@ Environment settings
 **Install**
 
     yarn add -D lint-staged
+
+### [Workflow](https://app.creately.com/diagram/hxmQB22aeoW/view)
+
+-   Technologies and services used on projects
+
+![image](https://d1q8h8uqlxv0t0.cloudfront.net/workflow.png)
