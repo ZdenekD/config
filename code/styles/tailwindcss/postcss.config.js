@@ -9,5 +9,6 @@ module.exports = () => ({
             features: {'focus-within-pseudo-class': false},
         },
         'postcss-reporter': {clearReportedMessages: true},
+        cssnano: process.env.NODE_ENV === 'production',
     },
 });
