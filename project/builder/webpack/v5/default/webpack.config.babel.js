@@ -177,7 +177,7 @@ export default () => ({
                 ],
             },
             {
-                test: /\.(gif|png|jpe?g|webp)$/i,
+                test: /\.(gif|png|jpe?g|webp|avif)$/i,
                 exclude: /node_modules/,
                 type: 'asset/resource',
             },
