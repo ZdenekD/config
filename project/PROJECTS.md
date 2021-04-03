@@ -79,9 +79,10 @@
 ### &#128640; ZdenekD
 
 -   [NextJS](https://nextjs.org)
+-   [Typescript](https://www.typescriptlang.org)
 -   [React](https://reactjs.org)
     -   [AnimeJS](https://animejs.com)
-    -   [Fastify](https://www.fastify.io)
+    -   [Framer-motion](https://www.framer.com/motion/)
     -   [Lottie](https://airbnb.io/lottie/#/web)
     -   [React-modal](http://reactcommunity.org/react-modal/)
     -   [Sendgrid](https://sendgrid.com)

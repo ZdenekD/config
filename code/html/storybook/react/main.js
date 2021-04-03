@@ -1,5 +1,3 @@
-const path = require('path');
-
 module.exports = {
     stories: ['../src/**/*.stories.jsx', '../src/**/*.stories.tsx'],
     addons: [
@@ -7,6 +5,7 @@ module.exports = {
         '@storybook/addon-viewport/register',
         '@storybook/addon-docs',
         '@storybook/addon-a11y',
+        '@storybook/addon-actions',
         '@storybook/addon-backgrounds',
     ],
     webpackFinal: async (config, {configType}) => {
@@ -31,14 +30,13 @@ module.exports = {
                         modules: {
                             mode: 'local',
                             localIdentName: !isProduction ? '[name]-[local]--[hash:base64:6]' : '[hash:base64:8]',
-                            context: path.resolve(__dirname, 'src'),
                         },
                         sourceMap: !isProduction,
                     },
                 },
                 {
                     loader: 'postcss-loader',
-                    options: {sourceMap: 'inline'},
+                    options: {sourceMap: !isProduction},
                 },
             ],
         }, {
