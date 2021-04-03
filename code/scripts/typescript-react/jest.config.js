@@ -22,9 +22,10 @@ module.exports = {
         '!src/**/*.d.ts',
         '!src/index.{js,jsx,ts,tsx}',
         '!src/**/*.stories.{js,jsx,ts,tsx}',
+        '!src/__test__/**/*',
     ],
     coverageDirectory: './__test__/coverage',
     coverageReporters: ['html', 'lcov'],
-    setupFiles: ['<rootDir>/src/__test__/utils/enzyme.js'],
+    setupFiles: ['<rootDir>/src/__test__/enzyme.js'],
     snapshotSerializers: ['jest-serializer-html'],
 };
