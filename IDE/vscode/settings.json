@@ -55,13 +55,11 @@
   "eslint.validate": ["html", "javascript", "javascriptreact", "svelte"],
   "eslint.lintTask.enable": true,
   "eslint.run": "onSave",
-  "eslint.packageManager": "yarn",
   "eslint.format.enable": true,
   "css.validate": false,
   "scss.validate": false,
   "prettier.requireConfig": true,
   "prettier.configPath": ".prettierrc",
-  "prettier.packageManager": "yarn",
   "prettier.printWidth": 160,
   "prettier.singleQuote": true,
   "prettier.tabWidth": 4,
@@ -78,7 +76,6 @@
   "[html]": {
     "editor.formatOnSave": false
   },
-  "markdown.extension.toc.githubCompatibility": true,
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },

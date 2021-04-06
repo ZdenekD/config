@@ -69,6 +69,7 @@
     @storybook/addon-viewport
     @storybook/addon-docs
     @storybook/addon-a11y
+    @storybook/addon-actions
     @storybook/addon-backgrounds
 
 **Packages React**
@@ -81,7 +82,7 @@
 
 **Install**
 
-    yarn add -D @storybook/addon-storysource @storybook/addon-viewport @storybook/addon-docs @storybook/addon-a11y @storybook/addon-backgrounds
+    yarn add -D @storybook/addon-storysource @storybook/addon-viewport @storybook/addon-docs @storybook/addon-a11y @storybook/addon-actions @storybook/addon-backgrounds
 
 ---
 
@@ -117,4 +118,4 @@
 
 **Install**
 
-    yarn add -D hint
+    yarn add -D hint @hint/configuration-web-recommended
