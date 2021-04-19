@@ -1,13 +1,13 @@
 module.exports = {
     verbose: true,
     transform: {
-        '^.+\\.ts(x)?$': 'ts-jest',
-        '^.+\\.css$': '<rootDir>/__test__/transform/css.js',
+        '^.+\\.ts(x)?$': 'babel-jest',
         '^.+\\.svg$': '<rootDir>/__test__/transform/svg.js',
         '^(?!.*\\.json$)': '<rootDir>/__test__/transform/file.js',
     },
     transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$', '^.+\\.module\\.(css|sass|scss)$'],
     roots: ['<rootDir>/src'],
+    moduleNameMapper: {'\\.css$': 'identity-obj-proxy'},
     moduleFileExtensions: [
         'js',
         'jsx',
@@ -26,6 +26,7 @@ module.exports = {
     ],
     coverageDirectory: './__test__/coverage',
     coverageReporters: ['html', 'lcov'],
-    setupFiles: ['<rootDir>/src/__test__/enzyme.js'],
+    setupFiles: ['<rootDir>/src/__test__/setup.ts'],
     snapshotSerializers: ['jest-serializer-html'],
+    globals: {'babel-jest': {tsconfig: '<rootDir>/tsconfig.test.json'}},
 };

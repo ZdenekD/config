@@ -19,6 +19,6 @@ module.exports = {
     ],
     coverageDirectory: './__test__/coverage',
     coverageReporters: ['html', 'lcov'],
-    setupFiles: ['<rootDir>/src/__test__/enzyme.js'],
+    setupFiles: ['<rootDir>/src/__test__/setup.js'],
     snapshotSerializers: ['jest-serializer-html'],
 };

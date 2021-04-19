@@ -52,7 +52,7 @@
 
 **Setup**
 
-    /code/scripts/utils/enzyme.js
+    /code/scripts/utils/setup.js
 
 -   Transform helpers
 
