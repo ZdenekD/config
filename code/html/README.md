@@ -65,6 +65,7 @@
 
 **Packages Addons**
 
+    @storybook/addon-postcss
     @storybook/addon-storysource
     @storybook/addon-viewport
     @storybook/addon-docs
@@ -82,7 +83,7 @@
 
 **Install**
 
-    yarn add -D @storybook/addon-storysource @storybook/addon-viewport @storybook/addon-docs @storybook/addon-a11y @storybook/addon-actions @storybook/addon-backgrounds
+    yarn add -D @storybook/addon-postcss @storybook/addon-storysource @storybook/addon-viewport @storybook/addon-docs @storybook/addon-a11y @storybook/addon-actions @storybook/addon-backgrounds
 
 ---
 
