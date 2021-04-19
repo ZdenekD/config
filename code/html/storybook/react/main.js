@@ -1,6 +1,11 @@
 module.exports = {
     stories: ['../src/**/*.stories.jsx', '../src/**/*.stories.tsx'],
     addons: [
+        {
+            name: '@storybook/addon-postcss',
+            // eslint-disable-next-line global-require
+            options: {postcssLoaderOptions: {implementation: require('postcss')}},
+        },
         '@storybook/addon-storysource',
         '@storybook/addon-viewport/register',
         '@storybook/addon-docs',
@@ -13,7 +18,7 @@ module.exports = {
         const cssIndex = config.module.rules.findIndex(item => item.test.toString() === /\.css$/.toString());
 
         // eslint-disable-next-line no-param-reassign
-        config.module.rules = config.module.rules.map(rule => (rule.test.toString().search('svg') > 0
+        config.module.rules = config.module.rules.map(rule => (rule.test?.toString().search('svg') > 0
             ? {
                 ...rule,
                 test: RegExp(rule.test.toString().replace('svg|', '').replace(/\//g, '')),

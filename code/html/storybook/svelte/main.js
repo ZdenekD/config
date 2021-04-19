@@ -3,6 +3,11 @@ const preprocessor = require('svelte-preprocess');
 module.exports = {
     stories: ['../src/**/*.stories.js'],
     addons: [
+        {
+            name: '@storybook/addon-postcss',
+            // eslint-disable-next-line global-require
+            options: {postcssLoaderOptions: {implementation: require('postcss')}},
+        },
         '@storybook/addon-storysource',
         '@storybook/addon-viewport/register',
         '@storybook/addon-docs',

@@ -1,3 +1,26 @@
+### [Vite](https://vitejs.dev)
+
+-   Vite frontend tool
+-   It uses `postcss` and `css-modules`
+
+**Config**
+
+#### React + Typescript
+
+    /project/builder/vite/react/vite.config.ts
+
+**Dependencies**
+
+    Vite
+        vite
+
+    Plugins
+        @vitejs/plugin-react-refresh
+
+**Install**
+
+    yarn add -D vite @vitejs/plugin-react-refresh
+
 ### [Webpack](https://webpack.js.org/)
 
 -   Webpack builder config files

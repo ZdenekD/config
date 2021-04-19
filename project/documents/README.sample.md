@@ -34,8 +34,28 @@ yarn build
 
 How to run and write tests
 
+### Jest
+
 ```shell
-yarn test
+yarn jest
+yarn jest:coverage
+```
+
+### Cypress
+
+```shell
+yarn cypress
+yarn cypress:open
+```
+
+### Webhint
+
+-   develop and production url has to be set in package.json
+
+```shell
+yarn hint:local     (test localhost)
+yarn hint:dev       (test develop url)
+yarn hint:prod      (test production url)
 ```
 
 ## Deploying
