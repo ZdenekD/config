@@ -40,3 +40,20 @@ There's minimal configurations editable for the needs of specific projects.
 ## &#128221; [Editor / IDE](./IDE/README.md)
 
 -   Some base settings for code editors
+
+## &#127913; [Degit](https://github.com/Rich-Harris/degit)
+
+-   **degit UserName/RepoName folder-name**
+
+### Public repo
+
+```
+degit ZdenekD/repo folder-name
+```
+
+### Private repo
+
+```
+degit --mode=git ZdenekD/repo folder-name
+degit --mode=git ZdenekD/project-zero new-project-folder
+```
