@@ -100,7 +100,6 @@
 <link rel="icon" type="image/png" href="https://example.com/favicon-16x16.png" sizes="16x16" />
 <link rel="icon" type="image/png" href="https://example.com/favicon-32x32.png" sizes="32x32" />
 <link rel="icon" type="image/png" href="https://example.com/favicon-194x194.png" sizes="194x194" />
-<link rel="mask-icon" href="https://example.com/safari-pinned-tab.svg" />
 ```
 
 [ ] **Canonical:** ![Medium][medium] Use `rel="canonical"` to avoid duplicate content.
@@ -228,9 +227,7 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 [ ] **Noscript tag:** ![Medium][medium] Use `<noscript>` tag in the HTML body if a script type on the page is unsupported or if scripting is currently turned off in the browser.
 
 ```html
-<noscript>
-    You need to enable Javascript to run this app.
-</noscript>
+<noscript> You need to enable Javascript to run this app. </noscript>
 ```
 
 [ ] **Non-blocking:** ![Medium][medium] Javascript files are loaded asynchronously using `async` or deferred using `defer` attribute.
