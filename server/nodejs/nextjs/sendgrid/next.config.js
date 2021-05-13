@@ -19,6 +19,12 @@ module.exports = styles({
 
         return config;
     },
+    i18n: {
+        locales: ['cs'],
+        defaultLocale: 'cs',
+        localeDetection: false,
+    },
     env: {SENDGRID_API_KEY: process.env.SENDGRID_API_KEY},
     poweredByHeader: false,
+    future: {webpack5: true},
 });
