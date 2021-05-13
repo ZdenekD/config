@@ -17,6 +17,7 @@ module.exports = {
         'src/**/*.{js,svelte}',
         '!src/index.js',
         '!src/**/*.stories.{js,svelte}',
+        '!src/**/data/*',
     ],
     coverageDirectory: './__test__/coverage',
     coverageReporters: ['html', 'lcov'],

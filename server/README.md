@@ -30,6 +30,21 @@
 
 ### [NextJS](https://nextjs.org)
 
+#### CSS Modules fix
+
+Because of problems with NextJS CSS modules and Framer-motion (if is used `<AnimatePresence exitBeforeEnter>`, NextJS change styles immediately and animation `before unmount` is unstyled).
+Solution is use @zeit/next-css package, but there is invalid configuration for postcss, so edit files are in folder **next-css**. For proper work it's necessary use @zeit/next-css package
+and edited files from folder 'next-css'.
+
+Dependecies:
+
+    -   css-loader
+    -   extracted-loader
+    -   find-up
+    -   ignore-loader
+    -   mini-css-extract-plugin
+    -   postcss-loader
+
 #### Basic settings
 
 -   nodejs react framework
