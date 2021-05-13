@@ -15,6 +15,7 @@ module.exports = {
         'src/**/*.js',
         '!src/index.js',
         '!src/**/*.stories.js',
+        '!src/**/data/*',
     ],
     coverageDirectory: './__test__/coverage',
     coverageReporters: ['html', 'lcov'],

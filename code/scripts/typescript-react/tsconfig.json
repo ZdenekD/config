@@ -23,6 +23,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true
   },
-  "exclude": ["node_modules", "**/*.spec*", "doc", "dist"],
+  "exclude": ["node_modules", "doc", "dist", "build"],
   "include": ["./src"]
 }
