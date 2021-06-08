@@ -8,9 +8,9 @@ php_flag opcache.enable Off
 
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule !\.(css|gif|ico|jpe?g|js|json|mp4|pdf|png|svgz?|txt|avif|web[mp]|woff2?|xml)$ dist/index.html [L]
+    RewriteRule !\.(css|gif|ico|jpe?g|jxl|js|json|mp4|pdf|png|svgz?|txt|avif|web[mp]|woff2?|xml)$ dist/index.html [L]
 
-    RewriteCond %{REQUEST_URI} \.(css|gif|ico|jpe?g|js|json|mp4|pdf|png|svgz?|txt|avif|web[mp]|woff2?|xml)$
+    RewriteCond %{REQUEST_URI} \.(css|gif|ico|jpe?g|jxl|js|json|mp4|pdf|png|svgz?|txt|avif|web[mp]|woff2?|xml)$
     RewriteCond %{REQUEST_URI} !^/dist
     RewriteRule ^(.*) dist/$1 [L]
 </ifModule>
@@ -24,6 +24,7 @@ php_flag opcache.enable Off
     AddType application/json map
     AddType application/manifest+json webmanifest
     AddType image/svg+xml svgz
+    AddType image/jxl jxl
     AddType image/avif avif
     AddType image/webp webp
     AddType image/x-icon ico
@@ -48,6 +49,7 @@ php_flag opcache.enable Off
     ExpiresByType image/x-icon "access plus 31536000 seconds"
     ExpiresByType image/jpeg "access plus 31536000 seconds"
     ExpiresByType image/jpg "access plus 31536000 seconds"
+    ExpiresByType image/jxl "access plus 31536000 seconds"
     ExpiresByType image/png "access plus 31536000 seconds"
     ExpiresByType image/avif "access plus 31536000 seconds"
     ExpiresByType image/webp "access plus 31536000 seconds"
@@ -75,7 +77,7 @@ php_flag opcache.enable Off
     <filesMatch "\.(woff2?)$">
         Header set Cache-Control "public, max-age=31536000, immutable"
     </filesMatch>
-    <filesMatch "\.(gif|ico|jpe?g|mp4|png|avif|web[mp])$">
+    <filesMatch "\.(gif|ico|jpe?g|jxl|mp4|png|avif|web[mp])$">
         Header set Cache-Control "public, max-age=31536000, immutable"
     </filesMatch>
     <filesMatch "\.(css)$">
@@ -89,7 +91,7 @@ php_flag opcache.enable Off
     <filesMatch "\.(x?html?|php)$">
         Header set Cache-Control "private, max-age=180"
     </filesMatch>
-    <filesMatch "\.(css|gif|ico|jpe?g|js|json|mp4|pdf|png|svgz?|txt|avif|web[mp]|woff2?|xml)$">
+    <filesMatch "\.(css|gif|ico|jpe?g|jxl|js|json|mp4|pdf|png|svgz?|txt|avif|web[mp]|woff2?|xml)$">
         Header unset Content-Security-Policy
         Header unset X-Content-Security-Policy
         Header unset X-Frame-Options

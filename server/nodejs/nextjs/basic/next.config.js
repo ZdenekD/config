@@ -1,4 +1,7 @@
-const styles = require('@zeit/next-css');
+/* eslint-disable @typescript-eslint/no-var-requires */
+require('dotenv').config();
+
+const styles = require('./next-css');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -20,7 +23,6 @@ module.exports = styles({
     i18n: {
         locales: ['cs'],
         defaultLocale: 'cs',
-        localeDetection: false,
     },
     poweredByHeader: false,
     future: {webpack5: true},

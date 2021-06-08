@@ -10,23 +10,23 @@
 
 ## Content
 
--   [CHECKLIST](#checklist)
-    -   [Priorities](#priorities)
-    -   [Content](#content)
-    -   [Project](#project)
-    -   [Head](#head)
-    -   [HTML](#html)
-    -   [Styles](#styles)
-    -   [Scripts](#scripts)
-    -   [Fonts](#fonts)
-    -   [Images](#images)
-    -   [Server](#server)
-    -   [Security](#security)
-    -   [Performance](#performance)
-    -   [Accessibility](#accessibility)
-    -   [SEO](#seo)
-    -   [Test](#test)
-    -   [Others](#others)
+- [CHECKLIST](#checklist)
+  - [Priorities](#priorities)
+  - [Content](#content)
+  - [Project](#project)
+  - [Head](#head)
+  - [HTML](#html)
+  - [Styles](#styles)
+  - [Scripts](#scripts)
+  - [Fonts](#fonts)
+  - [Images](#images)
+  - [Server](#server)
+  - [Security](#security)
+  - [Performance](#performance)
+  - [Accessibility](#accessibility)
+  - [SEO](#seo)
+  - [Test](#test)
+  - [Others](#others)
 
 ## Project
 
@@ -118,22 +118,6 @@
 
 ```html
 <meta name="msapplication-config" content="browserconfig.xml" />
-```
-
-Minimum required xml markup for the `browserconfig.xml` file is as follows:
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<browserconfig>
-   <msapplication>
-     <tile>
-        <square70x70logo src="small.png"/>
-        <square150x150logo src="medium.png"/>
-        <wide310x150logo src="wide.png"/>
-        <square310x310logo src="large.png"/>
-     </tile>
-   </msapplication>
-</browserconfig>
 ```
 
 [ ] **Facebook Open Graph:** ![Low][low] All Facebook Open Graph (OG) are tested and no one is missing or with a false information. Images need to be at least 600 x 315 pixels, although 1200 x 630 pixels is recommended.
