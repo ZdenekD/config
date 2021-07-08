@@ -34,7 +34,7 @@ module.exports = {
                     options: {
                         modules: {
                             mode: 'local',
-                            localIdentName: !isProduction ? '[name]-[local]--[hash:base64:6]' : '[hash:base64:8]',
+                            localIdentName: !isProduction ? '[name]-[local]--[hash:base64:4]' : '[hash:base64:5]',
                         },
                         sourceMap: !isProduction,
                     },
